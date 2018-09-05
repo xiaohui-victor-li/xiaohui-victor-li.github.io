@@ -9,7 +9,6 @@ nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
-    text-align: center;
     width: 100%;
     height: 45px
 }
@@ -41,13 +40,15 @@ p {
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: 1em;
+    color: white;
     text-align: center;
 }
 
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 2em;
-    text-align: center;
+    color: white;
+    vertical-align: middle;
 }
 
 ul.posts li {
