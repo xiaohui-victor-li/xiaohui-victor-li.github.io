@@ -6,17 +6,18 @@ nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     background-color: #40E0D0;
     display: block;
-    margin:0;
-    padding: 10px;
+    margin:5px;
+    padding: 20px;
     list-style: none;
     font-weight: bold;
     color: white;
     width: 100%;
-    height: 45px
+    height: 30px
 }
 
 .link { color: #40E0D0; }
-.link:hover { color: white; }
+.link:hover { color: blue; }
+
 nav ul li, footer ul li {
     display: inline;
     margin-right: 30px;
@@ -45,9 +46,12 @@ footer {
     text-align: center;
 }
 
+ul
+
+
 ul.posts { 
     margin: 20px auto 40px; 
-    font-size: 2em;
+    font-size: 3em;
     color: white;
     vertical-align: middle;
 }
