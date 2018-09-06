@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Thoughts"
+title: "Prelude"
 date: 2018-09-06
 ---
 
