@@ -50,7 +50,7 @@ The middle equivalence is the half core of LP solution as it bridges the *algebr
 
   ![vertices](/Users/lxh/Desktop/vertices.png)
 
-###Equivalence
+### Equivalence
 
 > Theorem
 >
