@@ -8,4 +8,4 @@ First day to record my life in this homepage. I will actively maintain a habbit 
 Hello world!
 
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~lxhstark/51.embed"></iframe>
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~lxhstark/51.embed"></iframe>
