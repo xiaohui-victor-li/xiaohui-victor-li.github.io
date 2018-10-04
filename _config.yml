@@ -2,4 +2,4 @@ name: Xiaohui Li
 markdown: kramdown
 
 permalink: /blog/:year/:month/:day/:title
-permalink: /projects/:title
+
