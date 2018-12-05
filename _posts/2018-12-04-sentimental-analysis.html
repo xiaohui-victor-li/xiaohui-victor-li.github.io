@@ -1,6 +1,6 @@
 ---
-title: "Film Sentimental Analysis with CloVe and Bidirectional LSTM"
-date: 2018-09-30
+title: "Sentimental Analysis on Film Interview with GloVe and Bidirectional LSTM Model"
+date: 2018-12-04
 ---
 
 
@@ -66,7 +66,7 @@ div.mermaidTooltip { position: absolute; text-align: center; max-width: 200px; p
 
 :root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1.2rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -162,7 +162,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); }
 .math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 1.2rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
@@ -214,17 +214,17 @@ iframe { max-width: 100%; width: 100%; border: none; }
 .CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
 .CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
 .CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
-.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-keyword { color: rgb(255, 161, 203); }
 .cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
-.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-number { color: rgb(63, 255, 178); }
 .cm-s-inner .cm-def { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable { color: #e9fffe; }
 .cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
 .cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
-.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
-.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
-.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string { color: rgb(255, 95, 95); }
+.cm-s-inner .cm-property { color: rgb(97, 238, 255); }
+.cm-s-inner .cm-operator { color: rgb(247, 255, 0); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(195, 255, 120); }
 .cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
 .cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
 .cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
@@ -569,7 +569,7 @@ div.mermaidTooltip {
 @import "night/sourcemode.dark.css";
 
 :root {
-    --bg-color:  #363B40;
+    --bg-color:  #33383c;
     --side-bar-bg-color: #2E3033;
     --text-color: #b8bfc6;
 
@@ -617,7 +617,7 @@ input,
 select,
 textarea,
 div.code-tooltip-content {
-    color: #b8bfc6;
+    color: #f1feff;
 }
 
 div.code-tooltip,
@@ -659,7 +659,7 @@ h6 {
     word-wrap: break-word;
     margin: 0;
     padding: 0;
-    color: #DEDEDE
+    color: #9bddff
 }
 
 h1 {
@@ -684,7 +684,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.17rem;
+    font-size: 1.4rem;
     /* 18px */
     line-height: 1.5rem;
     /* 24px */
