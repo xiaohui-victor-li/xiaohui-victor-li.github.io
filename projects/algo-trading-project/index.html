@@ -105,11 +105,19 @@
 								<a href="#">
 									<img src="images/flowchart.jpg" alt="" width="80%" />
 								</a>
+								
+								<p>In this project, we intend to improve classical <span style="color:royalblue">Mean Variance Optimization(MVO)</span> which is criticized for high sensitivity to the estimation on expected return and covariance. Moreover, we want to bring the model under the background of high frequency trading.</p>
+								
+								<p>With that in Mind, we structure our project into 4 main parts: <span style="color:royalblue">Data Input</span>, <span style="color:royalblue">Alpha Signal</span>, <span style="color:royalblue">Core Portfolio Optimization engine</span> and <span style="color:royalblue">Performance Analysis</span>.</p>
 								<p>&nbsp;</p>
 
 								<a href="#">
 									<img src="images/flow2.jpeg" alt="" width="80%" />
 								</a>
+								<p>More detailedly,  instead of the original MVO input, we trained our Signal based on statistical and technical features, calculate Covariance Matrix as well as transaction cost related data (ex. Bid-ask spread, and average daily volume). Then we inject them into the core portfolio optimization scheme. </p>
+								<p>In the optimizer, we embed transaction cost analysis into the object function. We also generate long-short indicator using Signals. Beyond that, we also experimented on several extensions according to different market intuitions.  </p>
+								<p>The result of the optimization, i.e. weights determines how we trade and give us the portfolio performance.</p>
+
 							<footer>
 								<a href="#input" class="button scrolly">Project Input & Assumpation</a>
 							</footer>
@@ -136,9 +144,9 @@
 						<ul>
 						<li><h2>Assumptions:</h2>
 						<ul>
-						<li>All the stock are divisble</li>
-						<li>Price-taker trading mechanism</li>
-						<li>No shortselling ban, and higher commission fee for shortselling</li>
+						<li align="middle">a. All the stock are divisble</li>
+						<li align="middle">b. Price-taker trading mechanism</li>
+						<li align="middle">c. No shortselling ban, and higher commission fee for shortselling</li>
 
 						</ul>
 						</li>
@@ -148,17 +156,13 @@
 						<ul><li><h2>Benchmark choosing</h2><ul>
 						<p>&nbsp;</p>
 						<iframe id="igraph" scrolling="no" class="image fit" style="border:none;" seamless="seamless" src="https://plot.ly/~f_nnyz/10.embed" height="450" width="80%"></iframe>
-						<li><p >Traditional Benchmark: Index</p>
-						<ul>
-						<li>Survival Bias (stock suspension, changes in index constituents)</li>
-
-						</ul>
-						</li>
-						<li><p>Customize Benchmark</p>
-						<ul>
-						<li><p>Construct a new benmark with traded stock based on cap</p>
+						
+						<li>Traditional Benchmark: Index</li>
+						<li><span style="color:tomato">Survival Bias Problem</span> (stock suspension, changes in index constituents...)</li>
 						<p>&nbsp;</p>
-						</li>
+						<li>Our Solution: <span style="color:royalblue">Customized Benchmark</span></li>
+						<li>Construct a new benmark with traded stock weighted based on <span style="color:skyblue">market capitalization</span></li>
+						<p>&nbsp;</p>
 				
 
 					
@@ -176,11 +180,19 @@
 
 							<header>
 								<h2>Alpha Signal</h2>
-								<h3>Financial Machine Learning</h3> 
+								<h3><span style="background-color:DodgerBlue;color:white"> Concept </span>  Financial Machine Learning</h3> 
 							</header>
 							
 							<body class='typora-export' >
-							<div  id='write'  class = 'is-mac'><ul><li><p>A. classical linear alpha signal prediction among stock market is <strong>notirously difficult </strong> </p><ul><li>Non-linearity  </li><li>Noisy Randomness </li><li>Pattern Decay - <em>Regime Shift</em>  </li></ul><p>&nbsp;</p></li><li><p>B. general machine learning in finance is <strong>naively implemented</strong> </p><ul><li><p>Time Series  </p></li><li><p>Robustness</p><p>&nbsp;</p></li></ul></li></ul>
+							<div  id='write'  class = 'is-mac'><ul><li><p>A. classical linear alpha signal prediction among stock market is <span style="color:tomato">notirously difficult... </span>
+							</p><ul><li>Non-linearity  </li>
+								<li>Noisy Randomness </li>
+								<li>Pattern Decay - <em>Regime Shift</em>  </li></ul>
+							<li><p>B. general machine learning in finance is <span style="color:tomato">naively implemented</span> </p><ul><li>Time Series</li><li>Robustness</li></ul></li></ul>
+							<p>&nbsp;</p></li>
+
+							<p> For this section, we aim to design a machine-learning based model to dynamically select out the upward and downward trending stock among the stock pool. Specifically, the machine learning algorithm output a trading signal for each stocks from training in the histrocial data. We strive to preserve the <span style="color:tomato">overfitting issue</span> while maintaining a <span style="color:royalblue">robust prediction</span> to capture the trend under test set, thus enhancing the potential performance in true test set, which is live trading. 
+							</p>
 
 
 							<footer>
@@ -205,17 +217,20 @@
 						<p>&nbsp;</p>
 
 						<li>Feature Selection</li>
-						<p>apply light gradient boosting tree model to find the feature importance</p>
+						<p>apply light gradient boosting tree model to find the feature importance on predicting the future stock return trend</p>
 						<a href="#" ><img src="images/ml/feat_importance.png" alt="" /></a>
 						<p>&nbsp;</p>
 
-						<h4 align="left"><a name='header-n100' class='md-header-anchor '></a>Dependent Variables</h4><ul><li>Up (+1) - top 25% positive return stocks </li><li>Down (-1) - bottom 25% loss return stocks  </li><li>Medium (0) - the rest stocks </li></ul>
+						<h4 align="left"><a name='header-n100' class='md-header-anchor '></a>Dependent Variables</h4>
+						<p>For each 15 minute period, rank and accordingly label the pool's stock <span style="color:royalblue">next period relative return</span> as dependent target.  
+						<ul><li>Up (+1) - top 25% positive return stocks </li><li>Down (-1) - bottom 25% loss return stocks  </li><li>Medium (0) - the rest stocks </li></ul>
 						<p>&nbsp;</p>
 
 
 						<h3><a name='header-n17' class='md-header-anchor '></a>Model Selection</h3>
 
 						<h4 align="left"><a name='header-n56' class='md-header-anchor '></a>Time Series Cross Validation</h4>
+							<p>implement <span style="color:skyblue">walk-forward</span> time series cross valdiation to avoid serial autocorrelation and look-ahead bias error, thus measuring the real validation set model performance.</p>
 							<a href="#">
 									<img src="images/ml/ts-cv.png" alt="" height=400 width =300 />
 							</a>
@@ -274,6 +289,7 @@
 							<a href="#">
 								<img src="images/tca/tca.jpeg" alt="" width = 70%/></a>
 							<p>&nbsp;</p>
+							<p>From the graph, we clearly see that there is a gap between Net Value and Transaction cost adjusted net value, especially during a high volatility period. Therefore, it is of great importance to formulate and punish on the transaction cost. </p>
 
 							<h3>Commission Fee & Bia Ask</h3>
 						
@@ -357,32 +373,24 @@
 				<section id="opt" class="three">
 						<div class="container">
 							<h2>Optimization Extension</h2>
-							<ul>
+							
 
-							<li><h3>Assumptions of Minimum Variance Optimization:</h3>
-							<ul>
-							<li>Covariance matrix is the correct measure of investment risk</li>
-							<li>Investment returns canbe adequately represented by a joint elliptical distribution, e.g., Normal Distribution</li>
+							<h3>Assumptions of Minimum Variance Optimization:</h3>
+							<p>Covariance matrix is the correct measure of investment risk. Investment returns canbe adequately represented by a joint elliptical distribution, e.g., Normal Distribution.</p>
+							<p>But the reality is different...</p>
 
-
-							</ul>
-							</li>
-
-							</ul>
 							<ul>
-							<li>
-								<p align="left">But the reality is different. Therefore, our optimization extension would focus on:</p>
-							<ul>
-							<li><strong>Risk Measurement</strong></li>
-							<li><strong>Risk Management</strong></li>
-							</ul>
+							<li><p>Our optimization extension would focus on:</p>
+							<ul><li><strong>Risk Measurement</strong></li></ul>
+							<ul><li><strong>Risk Management</strong></li></ul>
 							</li>
 							</ul>
 							<a href="#">
-								<img src="images/opt/5_extension framework.png" alt="" width = 80%></a>
+								<img src="images/opt/5_extension framework.jpeg" alt="" width = 80%></a>
+							<p>&nbsp;</p>
 							<p>&nbsp;</p>
 
-							<h3 align="left">Optimization Extension 1: Downside Risk</h3>
+							<h3>Optimization Extension 1: Downside Risk</h3>
 							<ul>
 							<li><h4>Intuition:</h4>
 							<ul>
@@ -418,7 +426,7 @@
 
 							</ul>
 							<p>&nbsp;</p>
-							<h3 align="left">Optimization Extension 2: Shrink Weight</h3>
+							<h3>Optimization Extension 2: Shrink Weight</h3>
 							<ul>
 							<p>&nbsp;</p>
 							<li><h4>Intuition:</h4>
@@ -492,7 +500,7 @@
 							<p>&nbsp;</p>
 
 							<ul>
-							<li><p align="left">Source:</p>
+							<li><p>Source:</p>
 							<ul>
 							<li>Chonghui Jiang, Jiangze Du, Yunbi An, <em>Combining the minimum-variance and equally-weighted</em> <em>portfolios: Can portfolio performance be improved</em></li>
 
@@ -502,93 +510,103 @@
 							</ul>
 
 
-							<footer>
-								<a href="#extension" class="button scrolly">Project Extention</a>
-							</footer>
 							<p>&nbsp;</p>
+
+							<h3>Optimization Extension 4: CVar</h3>
+							<ul>
+							<p>&nbsp;</p>
+							<li><h4>Intuition:</h4>
+							<ul>
+							<li>Limit the maximum total amount of short selling, i.e., the L1 norm of the portfolio-weight vector is shrinked within a given threshold</li>
+							<li>A generalization of the shortselling constraint in which the total amount of short-selling should not exceed a given budget</li>
+
+							</ul>
+							</li>
+
+							</ul>
+							<ul>
+							<p>&nbsp;</p>
+							<li><h4>Formulation:</h4>
+							<ul>
+							<a href="#">
+								<img src="images/opt/extension2_form.png" alt="" width = 50%></a>
+							<p>&nbsp;</p>
+							</li>
+
+							</ul>
+							</li>
+
+							</ul>
+							<h4>Result:</h4>
+							<a href="#">
+								<img src="images/opt/curve_2.jpeg" alt="" width = 70%></a>
+							<a href="#">
+								<img src="images/opt/extension4_table.png" alt="" width = 70%></a>
+
+							<ul>
+							<p>&nbsp;</p>
+							<li><h4>Source:</h4>
+							<ul>
+							<li>Victor DeMiguel, Lorenzo Garlappi, Francisco J. &amp; Nogales Raman Uppal (July 2007), A Generalized Approach to Portfolio Optimization: Improving Performance By Constraining Portfolio Norms</li>
+
+							</ul>
+							</li>
+
+							</ul>
+
+							<p>&nbsp;</p>
+							<h3>Optimization Extension 5: Risk Parity</h3>
+							<ul>
+							<p>&nbsp;</p>
+							<li><h4>Intuition:</h4>
+							<ul>
+							<li>Limit the maximum total amount of short selling, i.e., the L1 norm of the portfolio-weight vector is shrinked within a given threshold</li>
+							<li>A generalization of the shortselling constraint in which the total amount of short-selling should not exceed a given budget</li>
+
+							</ul>
+							</li>
+
+							</ul>
+							<ul>
+							<p>&nbsp;</p>
+							<li><h4>Formulation:</h4>
+							<ul>
+							<a href="#">
+								<img src="images/opt/extension2_form.png" alt="" width = 50%></a>
+							<p>&nbsp;</p>
+							</li>
+
+							</ul>
+							</li>
+
+							</ul>
+							<h4>Result:</h4>
+							<a href="#">
+								<img src="images/opt/curve_5.jpeg" alt="" width = 70%></a>
+							<a href="#">
+								<img src="images/opt/extension5_table.png" alt="" width = 70%></a>
+
+							<ul>
+							<p>&nbsp;</p>
+							<li><h4>Source:</h4>
+							<ul>
+							<li>Victor DeMiguel, Lorenzo Garlappi, Francisco J. &amp; Nogales Raman Uppal (July 2007), A Generalized Approach to Portfolio Optimization: Improving Performance By Constraining Portfolio Norms</li>
+
+							</ul>
+							</li>
+
+							</ul>
+
+							<footer>
+								<a href="#extension" class="button scrolly">Thoughts</a>
+							</footer>
 
 
 						</div>
 					</section>
 
 
-				<section id="extension" class="two">
-						<div class="container">
-
-							<header>
-								<h2>Project Extension</h2>
-							</header>
-
-
-						<p>&nbsp;</p>
-								<ul><h3>Optimization - CVaR (Expected Shortfall)</h3>
-								<ul>
-								<li><h4>Intuition:</h4>
-								<ul>
-								<li>CVaR, a risk assessment measure that quantifies the amount of tail risk; an alternative way to improve skewness</li>
-
-								</ul>
-								</li>
-								<li><h4>Formulation:</h4>
-								<a href="#">
-								<img src="images/ext/aa.jpeg" alt="" width = 50%></a>
-								
-								<p>&nbsp;</p>
-								</li>
-
-								</ul>
-								</li>
-
-								</ul>
-								</li>
-
-								</ul>
-								<ul>
-								<li><p align="left">Source:</p>
-								<ul>
-								<li> Luis F. Zuluaga &amp; Samuel H. Cox, Improving skewness of mean-variance portfolios</li>
-
-								</ul>
-								</li>
-
-								</ul>
-								<p>&nbsp;</p>
-								<ul>
-								<li><h3>Optimization - Risk Parity</h3>
-								<ul>
-								<li><h4>Intuition:</h4>
-								<ul>
-								<li>The aim of Risk Parity Model is to make each asset contributes the same amount of risk to the portfolio</li>
-
-								</ul>
-								</li>
-								<li><h4>Formulation:</h4>
-								<a href="#">
-								<img src="images/ext/bb.jpeg" alt="" width = 50%></a>
-								
-								</ul>
-								</li>
-
-								</ul>
-								</li>
-
-								</ul>
-								</li>
-
-								</ul>
-								</li>
-										</ul>
-										<ul>
-								<p>&nbsp;</p>
-										<footer>
-											<a href="#extension2" class="button scrolly">Thoughts</a>
-										</footer>
-										<p>&nbsp;</p>
-
-
-									</div>
-							</section>
-					<section id="extension2" class="two">
+					<section id="extension" class="two">
 							<div class="container">
 
 							<header>
@@ -658,6 +676,8 @@
 
 							<iframe id="igraph" class="image fit" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~f_nnyz/75.embed" height="525" width="100%"></iframe>
 							</article>
+
+							<p>Overall, we achieved an increase in Net Value; Even in bear market, our net value almost maintain flat. Internally, all models out performs benchmark. Notebly, Semi Variance model and Shrink Weight bring our optimization scheme a whole stage up.</p>
 
 						<p>&nbsp;</p>
 						<p>&nbsp;</p>
@@ -769,11 +789,11 @@
 
 							<p align="left">
 								<strong>Xiaohui Li: </strong>xl2814@columbia.edu</br>
-								<strong>Yiren Yuan: </strong></br>
-								<strong>Meihua Ren: </strong>email here</br>
-								<strong>Fan Zhang: </strong>email here</br>
-								<strong>Zhenhong ZHang: </strong>email here</br>
-								<strong>Chang Liu: </strong>email here</br>
+								<strong>Yiren Yuan: </strong>yy2891@columbia.edu</br>
+								<strong>Meihua Ren: </strong>mr3846@columbia.edu</br>
+								<strong>Fan Zhang: </strong>fz2275@columbia.edu</br>
+								<strong>Zhenhong Zhang: </strong>zz2582@columbia.edu</br>
+								<strong>Chang Liu: </strong>cl3785@columbia.edu </br>
 							</br>
 								<strong>Columbia University </strong><a href="https://ieor.columbia.edu/">Department of Industrial Engineering and Operations Research</a><br>
 							</p>
