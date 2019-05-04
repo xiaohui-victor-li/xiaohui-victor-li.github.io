@@ -230,7 +230,7 @@
 						<h3><a name='header-n17' class='md-header-anchor '></a>Model Selection</h3>
 
 						<h4 align="left"><a name='header-n56' class='md-header-anchor '></a>Time Series Cross Validation</h4>
-							<p>implement <span style="color:skyblue">walk-forward</span> time series cross valdiation to avoid serial autocorrelation and look-ahead bias error, thus measuring the real validation set model performance.</p>
+							<p>Implement <span style="color:skyblue">walk-forward</span> time series cross valdiation to avoid serial autocorrelation and look-ahead bias error, thus measuring the real validation set model performance.</p>
 							<a href="#">
 									<img src="images/ml/ts-cv.png" alt="" height=400 width =300 />
 							</a>
@@ -239,16 +239,23 @@
 						
 
 						<h4 align="left"><a name='header-n60' class='md-header-anchor '></a>Ensemble of Ensemble </h4>
+						<p>From pre-experiment, the machine learning model is especially prone to <span style="color:tomato">overfitting problem</span>: the in-sample performance is easy to hack, yet the validation set results largely underperforms. This suggests tougher bias-variance tradeoff for finance data. </p>
+						<p>Ensemble bagging and boosting tree models are empirically shown to be effectively robust than naive model at out-of-sample set. Moreover, given fairly uncorrelated classfiers, ensemble of the learners, i.e. mean value of reliable classfiers' predictions, brings about even more robust performance in the sense of diversification effect. Inpired by this, we introduce the ensemble model <span style="color:royalblue">Random Forest</span> and <span style="color:royalblue">XGBoost</span>, and furthermore ensemble the two model as the <span style="color:royalblue">"ensemble of ensemble" classifier</span>.</p>      
 							<ul><li>Bagging - Random Forest   </li>
 							<li>Boosting  - XGBoost  </li>
 							<li><strong>Ensemble</strong>: combine XGBoost and Random Forest together</li>
 						<p>&nbsp;</p>
 
 					<h4 align="left"><a name='header-n89' class='md-header-anchor '></a>Model Race </h4><h4><a name='header-n91' class='md-header-anchor '></a>  </h4>
-					<p>Ensemble in validation set verifies to be the best model.</p>
+					<p>To support our intuition, we use time series cross validation to hold a "race" for those candidate machine learning models in same data condition. Specifically, we use a logistics model as the baseline model.</p>
+					<p>In terms of the out-of-sample metrics, we focus on the F1 score, which is the geometric average of precision and recall. However, since our classfication scenario is a multi-class task, we focus more on the up and down class rather than the medium label. So we design a <span style="color:skyblue">Up-Down F1 Score</span>, which is the average of up and down class F1 score.</p> 
 						<a href="#">
 							<img src="images/ml/race.png" alt="" height=300 width=500/></a>
 						<p>&nbsp;</p>
+
+
+					<p>Ensemble in validation set verifies to be the best model.</p>
+					<p>&nbsp;</p>
 
 							<footer>
 								<a href="#signaloutput" class="button scrolly">Signal Output</a>
@@ -263,15 +270,24 @@
 								<header>
 									<h3>Signal Output</h3> 
 								</header>
+								<p> With internal ensemble prediction algorithm, we could capture the market trend and thus use the predicted probability of rise-up, i.e. becoming top 25% at next period. We therefore iteratively output the <span style="color:royalblue">ahead-prediceted probability</span> for each candidate stock among the stock list as the score signal at each period.</p>
+								<p>During training set experience, we found that the machine learning model's predictive effectiveness decay over the passage of time. The out-of-sample performance wanes as the trained model lags behind prediction window, which may be due to the <span style="color:skyblue">market regime shift</span>. This <span style="color:tomato">alpha decay</span> calls for a rolling window mechanism to train the model to be more responsive to the shift of market pattern.</p>
+								<p>We thus design and implement a <span style="color:royalblue">rolling window pipeline</span> to dynamically train the model and output the prediction, thus making model more robust to the changing short-term market environment.</p>     
+
 
 								<h3><a name='header-n9' class='md-header-anchor '></a>   </h3>
-								<h4 align="left"><a name='header-n97' class='md-header-anchor '></a>Rolling Window Pipeline </h4>
-								<ul><li>Rolling Training Set - latest one week</li><li>Forward Prediction - next day (16 predicting period point) </li></ul><ul>
-							<li>Adaptive Feature Selection  </li></ul>
+								<h4 align="left"><a name='header-n97' class='md-header-anchor '></a>Rolling Window Pipeline</h4>
+								<p>We follow a rule-based rolling-window prediction algorithm, that always using the lagging one week data as training set, so as to be more responsive to the short-term market pattern; then only make the forward one-day length prediction.</p> 
+								<p>During the training procedure, to deal with the <span style="color:tomato">curse of dimensionality</span> problem, we also make an <span style="color:royalblue">automatic feature selection</span> from light GBM tree: filter out the irrelevant fetures with feature importance less than 0.05 and then use the left feature set as prediction features.</p>    
+								<ul><li>Rolling Training Set - latest one week</li><li>Forward Prediction - next day (16 predicting period point) </li></ul>
+								<ul><li>Adaptive Feature Selection</li></ul>
 
 
 							<p>&nbsp;</p>
-								<h4 align="left"><a name='header-n93' class='md-header-anchor '></a>Out-of-Sample Results</h4><figure><table><thead><tr><th style='text-align:center;' >Precision </th><th style='text-align:center;' >Recall</th><th style='text-align:center;' >Macro F1</th><th style='text-align:center;' >Up-Down F1</th><th style='text-align:left;' >Accuracy</th></tr></thead><tbody><tr><td style='text-align:center;' >0.51</td><td style='text-align:center;' >0.38 </td><td style='text-align:center;' >0.48 </td><td style='text-align:center;' >0.41</td><td style='text-align:left;' >0.58</td></tr></tbody></table></figure><p>&nbsp;</p>
+								<h4 align="left"><a name='header-n93' class='md-header-anchor '></a>Out-of-Sample Results</h4>
+								<p>For the prediction signal, we also keep the metrics as the test set performance, which lies as a reliable approximation of the real out-of-sample performance for the model.</p>   
+
+								<figure><table><thead><tr><th style='text-align:center;' >Precision </th><th style='text-align:center;' >Recall</th><th style='text-align:center;' >Macro F1</th><th style='text-align:center;' >Up-Down F1</th><th style='text-align:left;' >Accuracy</th></tr></thead><tbody><tr><td style='text-align:center;' >0.51</td><td style='text-align:center;' >0.38 </td><td style='text-align:center;' >0.48 </td><td style='text-align:center;' >0.41</td><td style='text-align:left;' >0.58</td></tr></tbody></table></figure><p>&nbsp;</p>
 							<footer>
 								<a href="#TCA" class="button scrolly">Transaction Analyst Cost</a>
 							</footer>
@@ -293,7 +309,7 @@
  
 							<p>In addition, compared with the benchmark, our long-signal-only strategy shows to be successful. Based on that, we are trying to use the short position and our optimizer to further improve our strategy.</p>
 
-							<h3>Commission Fee & Bia Ask</h3>
+							<h3>Commission Fee & Bid Ask</h3>
 						
 
 							<h4>Objective Function:</h4>
@@ -380,7 +396,7 @@
 
 							<h3>Assumptions of Minimum Variance Optimization:</h3>
 							<p>Covariance matrix is the correct measure of investment risk. Investment returns can be adequately represented by a joint elliptical distribution, e.g., Normal Distribution.</p>
-							<p>But the reality is different...</p>
+							<p>However, the reality is different... First, covariance matrix considers both the upside risk and <span style="color:tomato">downside risk</span>. While, in most of the time, we are only concerned when we are losing money. Moreover, portfolio returns are known as having <span style="color:tomato">fat tail and even extreme values</span>. Thus, the market intuitions lead us to focus more on improving our risk measurement and enhancing risk management.</p>
 
 							<p>Our optimization extension would focus on:</p>
 							<ul><li><span style="color:royalblue">Risk Measurement</span></li></ul>
@@ -514,7 +530,7 @@
 							<ul>
 							<li><h4>Intuition:</h4>
 							<ul>
-							<p>When the short-selling ban is absent, returns on Mean-Variance Portfolio and returns on Equally-Weighted Portfolio have low correlation. </p>
+							<p>When the short-selling ban is absent, returns on <span style="color:royalblue">Minimum Variance Portfolio</span> and returns on <span style="color:royalblue">Equally-Weighted Portfolio</span> have low correlation. </p>
 							<li>Combination of MVP and EWP can result in higher sharpe ratio ...</li>
 						 
 							</ul>
@@ -584,68 +600,24 @@
 
 							<ul>
 							<p>&nbsp;</p>
-							<li><h4>Source:</h4>
-							<ul>
-							<li>Victor DeMiguel, Lorenzo Garlappi, Francisco J. &amp; Nogales Raman Uppal (July 2007), A Generalized Approach to Portfolio Optimization: Improving Performance By Constraining Portfolio Norms</li>
 
 							</ul>
 							</li>
-
 							</ul>
+							<h3>Conclusion</h3>
+							<p>To summarize, when the reality violates the minimum variance optimization assumptions, our model extensions based on market intuitions end up with significant improvements. To be specific, when we only consider the downside risk or try to improve the <span style="color:royalblue">tail risk measurement by CVaR</span>, we obtain an obviously higher net value during almost all the test period in spite of the overall selloff of the benchmark. When we opt to limit the maximum total amount of short selling by <span style="color:royalblue">shrinking weight</span>, we instead obtain an over 4.4 higher Sharpe Ratio.</p> 
+							<p>In the condition that we diversify the portfolio by <span style="color:royalblue">combining the optimized model with equally weighted portfolio</span>, we do not improve the result as expected due to the large impact of transaction cost, which, on the other hand, proves our indispensable transaction cost analysis.</p> 
+							<p>Finally, the attempt of <span style="color:royalblue">risk parity model</span> to diversify portfolio risk does not provide a desirable result either. This is because risk parity is more largely used in asset allocation between different asset classes.</p> 
+							<p>In a nutshell, we managed to obtain remarkable improvements of the model based on most of our intuitions.</p>
+
 
 							<footer>
-								<a href="#extension" class="button scrolly">Thoughts</a>
+								<a href="#wrapup" class="button scrolly">Wrap-up</a>
 							</footer>
 
-
 						</div>
-					</section>
-
-
-					<section id="extension" class="two">
-							<div class="container">
-
-							<header>
-								<h2>Thoughts</h2>
-							</header>
-								
-								<h3>I. Optimization: </h3>
-								<ul>
-								<li>Speed up the algorithm of optimization in live trading</li>
-
-								</ul>
-								</li>
-								<p>&nbsp;</p>
-								<h3>II. Backtest:</h3>
-								<ul>
-								<li>Backtest with more historical data or simulated data to ensure model robustness</li>
-
-								</ul>
-								</li>
-
-								</ul>
-								<ul>
-								<p>&nbsp;</p>
-								<h3>III. Performance Analysis:</h3>
-								<ul>
-								<li>Attribution Analysis that gives the individual impact of portfolio constituents on portfolio performance, e.g. Sharpe Ratio decomposition</li>
-								<p>&nbsp;</p>
-
-								</ul>
-								</li>
-								</ul>
-						<footer>
-								<a href="#wrapup" class="button scrolly">Wrap-up</a>
-						</footer>
-
-
-						<p>&nbsp;</p>
-						<p>&nbsp;</p>
-
-
-						</div>
-
 				</section>
+
 
 				<section id="wrapup" class="two">
 						<div class="container">
