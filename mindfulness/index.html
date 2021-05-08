@@ -1,673 +1,683 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Mindfulness 正念</title><style>
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
 
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
-
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
-
-.highlight-default {
-}
-.highlight-gray {
-	color: rgb(155,154,151);
-}
-.highlight-brown {
-	color: rgb(100,71,58);
-}
-.highlight-orange {
-	color: rgb(217,115,13);
-}
-.highlight-yellow {
-	color: rgb(223,171,1);
-}
-.highlight-teal {
-	color: rgb(15,123,108);
-}
-.highlight-blue {
-	color: rgb(11,110,153);
-}
-.highlight-purple {
-	color: rgb(105,64,165);
-}
-.highlight-pink {
-	color: rgb(173,26,114);
-}
-.highlight-red {
-	color: rgb(224,62,62);
-}
-.highlight-gray_background {
-	background: rgb(235,236,237);
-}
-.highlight-brown_background {
-	background: rgb(233,229,227);
-}
-.highlight-orange_background {
-	background: rgb(250,235,221);
-}
-.highlight-yellow_background {
-	background: rgb(251,243,219);
-}
-.highlight-teal_background {
-	background: rgb(221,237,234);
-}
-.highlight-blue_background {
-	background: rgb(221,235,241);
-}
-.highlight-purple_background {
-	background: rgb(234,228,242);
-}
-.highlight-pink_background {
-	background: rgb(244,223,235);
-}
-.highlight-red_background {
-	background: rgb(251,228,228);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(55, 53, 47, 0.6);
-	fill: rgba(55, 53, 47, 0.6);
-}
-.block-color-brown {
-	color: rgb(100,71,58);
-	fill: rgb(100,71,58);
-}
-.block-color-orange {
-	color: rgb(217,115,13);
-	fill: rgb(217,115,13);
-}
-.block-color-yellow {
-	color: rgb(223,171,1);
-	fill: rgb(223,171,1);
-}
-.block-color-teal {
-	color: rgb(15,123,108);
-	fill: rgb(15,123,108);
-}
-.block-color-blue {
-	color: rgb(11,110,153);
-	fill: rgb(11,110,153);
-}
-.block-color-purple {
-	color: rgb(105,64,165);
-	fill: rgb(105,64,165);
-}
-.block-color-pink {
-	color: rgb(173,26,114);
-	fill: rgb(173,26,114);
-}
-.block-color-red {
-	color: rgb(224,62,62);
-	fill: rgb(224,62,62);
-}
-.block-color-gray_background {
-	background: rgb(235,236,237);
-}
-.block-color-brown_background {
-	background: rgb(233,229,227);
-}
-.block-color-orange_background {
-	background: rgb(250,235,221);
-}
-.block-color-yellow_background {
-	background: rgb(251,243,219);
-}
-.block-color-teal_background {
-	background: rgb(221,237,234);
-}
-.block-color-blue_background {
-	background: rgb(221,235,241);
-}
-.block-color-purple_background {
-	background: rgb(234,228,242);
-}
-.block-color-pink_background {
-	background: rgb(244,223,235);
-}
-.block-color-red_background {
-	background: rgb(251,228,228);
-}
-.select-value-color-default { background-color: rgba(206,205,202,0.5); }
-.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
-.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
-.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
-.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
-.select-value-color-green { background-color: rgba(0,135,107,0.2); }
-.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
-.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
-.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
-.select-value-color-red { background-color: rgba(255,0,26,0.2); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="c06eb9b7-2a39-4d14-a5f5-18817d1fe2fb" class="page sans"><header><img class="page-cover-image" src="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/leisure.jpeg" style="object-position:center 48.529999999999994%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/mind.jpeg"/></div><h1 class="page-title">Mindfulness 正念</h1></header><div class="page-body"><p id="b24ce123-6b4d-4400-b6d0-5292cfd8cae0" class="block-color-blue"><span class="user">@Xiaohui Li</span> </p><p id="41613f7b-ea53-4caa-9a2c-d016cbc27a63" class=""><mark class="highlight-blue"><strong>Mindfulness</strong></mark> as a means to train the mind. It is more of a process than an actual product. It can be thought of as the deliberate practice of cultivating presence and turning off autopilot. It is not about escaping reality, achieving bliss, or an altered state. It is about being fully present to reality.</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="44a7ead6-2bde-49ab-bcc6-de624a19962e"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Mindfulness is “paying attention in a particular way: on purpose, in the present moment, and non-judgmentally. And then I sometimes add, in the service of self-understanding and wisdom.” — Dr. Jon Kabat-Zinn, Founder of <mark class="highlight-teal_background">MBRS</mark> (Mindfulness Based Stress Reduction)</div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="5d7925f1-33a8-4b79-9028-9522edc40f16"><div style="font-size:1.5em"><span class="icon">💪🏻</span></div><div style="width:100%">Meditation is simply exercise for the mind, similar to the way we exercise our muscles when we play sports. For me, it has nothing to do with faith or mysticism. It’s about taking a few minutes out of my day, learning how to pay attention to the thoughts in my head, and gaining a little bit of distance from them - <a href="https://www.gatesnotes.com/Books/The-Headspace-Guide-to-Meditation-and-Mindfulness">GatesNotes</a></div></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="709abeb2-6b32-4812-8886-5195f7230133"><div style="font-size:1.5em"><span class="icon">🥋</span></div><div style="width:100%">To incorporate mindfulness into your daily life, 10 mins a day is enough - practical aspect</div></figure><p id="58f47096-d721-4067-8af4-38d51a0b90ef" class="">
-</p><ul id="cd5d4907-b80e-497d-a2ff-5a87cfc5c085" class="toggle"><li><details open=""><summary>Table of Contents</summary><nav id="43e1a78c-9e61-48a1-ac29-4d2c869f33ec" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e22128a4-ecdb-4476-b564-ea3b55229377">Overview</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5d2d6f21-f3ab-42e4-ab42-cb7be42ce0a2">Health Benefits of Mindfulness</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#0410a0dd-6cfc-4625-9661-5d1ade329670">7 Qualities of Mindfulness</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#581ff8e7-4a69-4578-9a50-f5d32cee9638">Practice Strategy </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f9ad64f2-46cd-4f9b-acbf-786f31bd293d">Week One: Learning to Pay Attention</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#3115c3b9-72dd-4cf4-88ad-525ef7bef003">Week Two: Establishing Connection with the Body 🔖</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#01e1b91e-95e9-4895-aa85-03eaca992727">The Body as a Reference Point for Awareness - Bare Attention</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#6efeaf20-899d-4cc5-aa88-fc55abdb7913">[ Practice ] Body Scan </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#ba106880-3be9-40a8-b983-034db54a0fe4">Week Three: Exploring Inner Landscape 🌱</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#8f9f7353-efa4-4daa-b75b-6caca09f5cc1">Origins of Modern Mindfulness </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#5afff056-8c21-40bd-af73-a01697cb3d2b">[ Practice ] Sitting Meditation</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#66ea6f53-cbaf-46e0-af05-02709801069f">Week Four: The Nuts and Bolts of Establishing a Practice 🗻</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#a4e166e0-db6b-4585-83af-3a6c3e0e6300">Setting the Stage for Practice</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#e1916943-344a-4b19-b836-ed6d954188e6">Noticing the Wandering Mind</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7d819a34-4317-4456-8bdc-09ff86ebe568">[ Practice ] 🌧️R.A.I.N Meditation: <mark class="highlight-blue"><strong>R</strong></mark>ecognize, <mark class="highlight-blue">A</mark>llow, <mark class="highlight-blue">I</mark>nvestigate and <mark class="highlight-blue">N</mark>urture </a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#7b72cca6-6ff3-4a4e-8764-2198b6ec1b87">Related Materials </a></div></nav></details></li></ul><hr id="bb7042a2-06bf-46de-a2ce-84a6d9da4ceb"/><h1 id="e22128a4-ecdb-4476-b564-ea3b55229377" class="">Overview</h1><blockquote id="e3dec625-9a6e-4a65-82dc-56c5c905aaea" class="">People spend 47% of their waking hours thinking about something other than what they are doing.</blockquote><p id="dcc4b883-d1f1-4cd2-8d24-90b451072cd7" class="">
-</p><p id="da371ed6-8b57-4316-9942-c6dbae0b14ff" class=""><mark class="highlight-yellow_background">Mindfulness</mark> is the act of paying <mark class="highlight-yellow_background">attention</mark>, on purpose, to all elements of our experience with an attitude of open acceptance, non-judgement and compassion.</p><ul id="8c8f2536-4135-45de-9e0c-54f38f9eb15b" class="bulleted-list"><li><strong>Present moment </strong>— Mindfulness attention is engaged in the here and now</li></ul><ul id="997117f0-0b32-41ad-9553-a93589be2e5d" class="bulleted-list"><li><strong>Without judgement</strong> — Mindfulness pay attention to our experiences with openness and curiosity → become a detached observer of sense perceptions, thoughts and emotions</li></ul><ul id="f9004ea0-e797-424d-8eb6-349ef87f1f6c" class="bulleted-list"><li><strong>Simple Practice</strong> — Focus on your breath, get rid of the barrage of thoughts, noticing the <mark class="highlight-yellow_background">wandering mind</mark> to become more consciously aware</li></ul><ul id="68b56599-d6c5-43e4-8e0d-9aa400be7622" class="bulleted-list"><li><strong>Anything But Easy To Implement</strong> —  Conceptually easy, <mark class="highlight-yellow_background">hard</mark> to put into practice</li></ul><ul id="d5eacfdd-d6fd-4459-997c-9a02de56eaca" class="bulleted-list"><li><strong>Cultivate A Mindset</strong> More Than Practice</li></ul><h2 id="5d2d6f21-f3ab-42e4-ab42-cb7be42ce0a2" class="">Health Benefits of Mindfulness</h2><div id="e33a057b-78b7-4930-9176-29d9528ceef5" class="column-list"><div id="3155f863-cf3b-4b9f-b04b-ab68153b8943" style="width:50.000000000000014%" class="column"><ol id="5b4d25ac-0374-4811-b541-1ac0930ac74b" class="numbered-list" start="1"><li>Attentional Control <p id="af7a1aa0-ad10-4883-acf3-f633828c3664" class="">Regular mindfulness practice will help <strong><mark class="highlight-yellow">sharpen your focus</mark></strong> — not only <mark class="highlight-yellow_background">more selective</mark> of what we pay attention to, also helps to pay attention to <mark class="highlight-yellow_background">new information in our environment</mark></p><p id="6bb4a08d-2d62-4a5c-ab43-7ea7b6892479" class="">bring <strong><mark class="highlight-yellow">fresh eyes</mark></strong> to habits, routines and overlearned activity </p><p id="a2366dbe-53d2-4ed1-b811-4c5dd8fddbf6" class="">
-</p><p id="93042130-c461-43ef-adfd-9ff11f91947c" class="">
-</p></li></ol></div><div id="421049b3-426d-44a6-95ab-170d01e8b566" style="width:50%" class="column"><p id="56f174ba-b6f6-46ce-b5e4-fe76ecd778c6" class="">2. Emotional Regulation<div class="indented"><p id="ba1abc19-9743-4cf2-84cb-74a3e5cfeb29" class="">Regular mindfulness practice can result in both <mark class="highlight-orange_background">structural and functional changes</mark> in the brain, especially in the areas that are activated when we are experience <mark class="highlight-red">stress</mark></p><p id="f888c8ae-6df9-44c6-bd31-d95c9f9c1389" class=""><strong><mark class="highlight-orange">Amygdala - limbic system</mark></strong>, like an alert-system could make you anxious. Mindfulness help you <mark class="highlight-orange_background">reduce</mark> the activeness of Amygdala.</p><p id="fe8a666a-9290-4726-9d6a-8c133e6d873b" class="">
-</p></div></p></div></div><hr id="23411ae5-6bbf-44f4-96c3-e14cb4e58119"/><p id="3285513c-4de7-47f3-93fa-e0ffea65b876" class="">
-</p><h2 id="0410a0dd-6cfc-4625-9661-5d1ade329670" class="">7 Qualities of Mindfulness</h2><div id="817a2f7c-cc5a-4bca-abc4-b83056fd851c" class="column-list"><div id="7c0ee606-7f0a-423d-9f8a-18dddb748c2a" style="width:43.75%" class="column"><ul id="a9eda603-51da-4aa4-a05c-f05f7e119433" class="bulleted-list"><li>a. Non-judgement<blockquote id="a08b9518-4c49-42c6-80f6-f7b0b6c548fe" class="">Assume the stance of an <mark class="highlight-yellow_background">impartial witness</mark> to any experience</blockquote><p id="4a7ef80c-2608-4725-a709-6b664097062a" class="">Begin to recognize the judging mind when we practice mindfulness</p></li></ul><ul id="1fe5703e-d998-4a29-a752-ac3066834821" class="bulleted-list"><li>b. Patience <p id="de39f775-368b-4f18-a58d-52c6df31fcba" class=""><mark class="highlight-yellow_background">Self-compassion </mark>to our awareness, helping us acknowledge and accept our own developmental process, trusting that our evolution is unfolding exactly as it should be. </p></li></ul></div><div id="b152f7e6-5bb2-4ea5-9b53-9b8dfde83f27" style="width:56.25%" class="column"><figure id="194d9008-0a2d-4a4b-985b-b2edb5cf4cb5" class="image"><a href="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/Screen_Shot_2021-04-17_at_2.08.18_PM.png"><img style="width:528px" src="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/Screen_Shot_2021-04-17_at_2.08.18_PM.png"/></a></figure><p id="91d5400c-203d-4430-bc23-4763806f824c" class="">
-</p></div></div><div id="2effb2c2-81d3-4201-bf09-0060770ce6bd" class="column-list"><div id="d6e8b1cd-bfd0-48e3-aac5-c6914facb88d" style="width:50%" class="column"><ul id="df586932-0f52-4d85-bd98-ef2c2f144eed" class="bulleted-list"><li>c. Beginner&#x27;s Mind<p id="5442e0b6-4786-41d8-b50a-d6fbedc962f7" class="">Developing a beginner&#x27;s mind set help to drop preconceived ideas, meet each moment with <mark class="highlight-yellow_background">clear eyes</mark>, <mark class="highlight-yellow_background">openness</mark> and <mark class="highlight-yellow_background">curiosity</mark></p></li></ul></div><div id="1aaca069-b656-49b3-b145-1317acfba5c2" style="width:50%" class="column"><ul id="ff8e5a75-5397-4150-b29d-f6868b738840" class="bulleted-list"><li>e1. Non-striving<p id="dd506e40-3cbf-454e-b0c1-4c5cbc27b778" class="">Striving can be a real hurdle 🚨</p><blockquote id="990b8e67-957c-4718-aa27-5d1f1daafa58" class=""><mark class="highlight-teal_background">be present for and open to</mark> an unfolding process rather than the some end product</blockquote></li></ul></div></div><div id="4a47c4e2-5626-4763-b642-6609077ae4f4" class="column-list"><div id="f807d3bc-fb72-4938-a824-b48fc40467aa" style="width:50%" class="column"><ul id="3327ec57-7ebf-480e-a2ce-b0e279b3d71d" class="bulleted-list"><li>d. Trust<p id="0370c0b6-6aab-44af-9baf-47d3d2090a13" class="">Trust intelligence, feedback from heart, true intentions. believe in our own intuition, authority and inherent goodness to <mark class="highlight-yellow_background">live with more authenticity</mark></p></li></ul></div><div id="a3030378-ff52-48c6-9dd9-d50956f65ac9" style="width:50%" class="column"><ul id="e0750f8e-d8ba-4b57-a1bd-24d62bcd4975" class="bulleted-list"><li>e2. Acceptance<p id="f64b2cd8-8950-4c2f-b202-d43439ef10ae" class="">seeing something <mark class="highlight-teal_background">as it actually is</mark> and making space for it, without all the layers of judgement or efforts to resist</p><p id="08a3dd39-d0a1-4661-8f13-adcef0b70be3" class="">→ X &quot;Being at war with our reality&quot;</p></li></ul><ul id="b8397ba9-9124-454c-abb2-d5461927cb3d" class="bulleted-list"><li>e3. Letting Go - Detachment<p id="545dafe5-7129-4cc3-a7a2-e6c2d56b4d2e" class="">most difficult of all the attitudinal foundation</p><p id="cebd6e36-884f-4d40-abf0-653081a13338" class="">→ requiring that our hearts be aligned with <mark class="highlight-blue_background">the way things actually are</mark></p></li></ul></div></div><hr id="c6830958-322e-429f-89cd-79050b57d24e"/><h2 id="581ff8e7-4a69-4578-9a50-f5d32cee9638" class="">Practice Strategy </h2><p id="24b173c5-5688-4bf0-b97a-3ec639fc5656" class="">shorter bouts of more intensive training → support ability to be generally mindful</p><ul id="5327b4e4-4309-4020-8758-fbfdf08d9352" class="bulleted-list"><li>Formal Practice: dedicated time for mindfulness meditation<ul id="6b47aa6b-0ed6-4b94-beba-9ae5f7cc299d" class="bulleted-list"><li>Body Scan </li></ul><ul id="9b1008e0-947d-41ad-9b24-47516c036fa1" class="bulleted-list"><li>Sitting Meditation</li></ul><ul id="2ed48c3b-447f-4b20-96bc-06f95d40540c" class="bulleted-list"><li>Mindful Movement</li></ul></li></ul><ul id="72a93b6c-191c-4bc7-9d25-515004a4e768" class="bulleted-list"><li>Informal Practice: paying attention to an everyday activity with fresh eyes</li></ul><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="745ac46a-9667-49ff-ad61-dbf1dde6d8db"><div style="font-size:1.5em"><span class="icon">🥋</span></div><div style="width:100%">practice regularly: commit to about 20 minutes of practice every day.  </div></figure><p id="9c3c38be-8750-4c80-a94a-0c7a8369df34" class="">
-</p><hr id="b00dccf1-1fe8-41d8-822f-1a28117ab04b"/><h1 id="f9ad64f2-46cd-4f9b-acbf-786f31bd293d" class="">Week One: Learning to Pay Attention</h1><p id="e1b61abd-b3fc-4512-8ee2-f6b42dd56c7b" class="">This week we&#x27;re focusing on our senses, and what it means to really tune in to sights, sounds, smells, tastes and touch as we go about our day. Below are three activities to that I hope you&#x27;ll try at least once this week:</p><ol id="797436ab-2a11-4096-8b5d-94d8e208e518" class="numbered-list" start="1"><li>Pick an activity that constitutes part of your daily morning routine, such as brushing your teeth, shaving, making the bed, or taking a shower. When you do it, totally focus your attention on all aspects of the activity: the body movements, the taste, the touch, the smell, the sight, the sound and so on. Notice what&#x27;s happening with an attitude of openness and curiosity. Try and do this with the same activity every day. At the end of the week, write a short reflection on how paying attention in this way shifted your experience of the activity.</li></ol><ol id="0cfd8f53-76da-45ac-bcb2-9e662095e855" class="numbered-list" start="2"><li>Create your own scavenger hunt. At least one day this week, pick something to look out for all day long (e.g. graffiti, broken window). Find it, note it. Look for more.</li></ol><ol id="bc232d84-db79-4c51-95bd-3db810786a39" class="numbered-list" start="3"><li>Take a &quot;sound&quot; walk. At least one day this week, take a walk, paying close attention to the sounds in your environment. See how many sounds you can distinguish, and keep count of the number of unique noises that you notice.</li></ol><figure id="868eb7f7-a46a-4fb3-9d44-e5a8b420dd32"><a href="https://coursera.org/share/79942bd5bd2b9ad4575c1c5cd4051ef7" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Brief Introductory Meditation - Learning to Pay Attention | Coursera</div><div class="bookmark-description">This Course Video Transcript This course provides a broad overview of the fundamental concepts, principles, and practices of mindfulness. With interactive exercises to help students explore their own attitudes, mental habits and behaviors, Foundations of Mindfulness offers a pathway for living with more freedom, authenticity and ease.</div></div><div class="bookmark-href"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png" class="icon bookmark-icon"/>https://coursera.org/share/79942bd5bd2b9ad4575c1c5cd4051ef7</div></div><img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/VIDEO_LANDING_PAGE/VIDEO_LANDING_PAGE~zuBEVZFwEeqtegrWvz04HQ/VIDEO_LANDING_PAGE~zuBEVZFwEeqtegrWvz04HQ.jpeg" class="bookmark-image"/></a></figure><figure id="16f2d7db-aa14-4f55-abc6-95047db0a57c"><a href="https://www.mindful.org/developing-a-daily-practice/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">How to Make Meditation a Daily Habit - Mindful</div><div class="bookmark-description">Six steps to add meditation and awareness to your daily routine. Awareness of your breath can serve as a steady basis for awareness in all you do. Explore this six-step practice to make mindfulness part of your daily routine: First, select a suitable place for your regular meditation.</div></div><div class="bookmark-href"><img src="https://cdn.mindful.org/cropped-Mindful-logo-blue-550px-1-192x192.png" class="icon bookmark-icon"/>https://www.mindful.org/developing-a-daily-practice/</div></div><img src="https://cdn.mindful.org/2010/08/Sit.jpg" class="bookmark-image"/></a></figure><p id="d2234ea1-cea1-428c-b5c8-14bb9db5c564" class="">— sensible of moment: when mindful and mindless </p><p id="803f6d31-25b5-41f1-8f38-5bb90871bc0a" class="">
-</p><hr id="3c2c4485-0f9d-47ad-8412-47555561c451"/><h1 id="3115c3b9-72dd-4cf4-88ad-525ef7bef003" class="">Week Two: Establishing Connection with the Body 🔖</h1><p id="23c7ff79-0639-4d48-9018-e84469f62401" class="">Awareness — Mindfulness — of Body 觉察</p><ul id="69f28e7f-aaca-4abc-8fd8-5933a1087b37" class="bulleted-list"><li>Always in the <mark class="highlight-teal_background">present</mark> moment → natural anchor for mindfulness</li></ul><ul id="6ef9931d-3044-4544-900c-60f57d947fca" class="bulleted-list"><li>Grounding effect as a home base</li></ul><ul id="2467d3a6-fa77-4fd9-948a-34611d421194" class="bulleted-list"><li><mark class="highlight-teal_background">Feel</mark> how to control attention</li></ul><h2 id="01e1b91e-95e9-4895-aa85-03eaca992727" class="">The Body as a Reference Point for Awareness - Bare Attention</h2><p id="0a4dcfc0-ad40-461e-b032-0c25f68b47cc" class="">The brain is interdependent with both our body and our surrounding environment → Turn attention inward, towards our own body and begins to establish the body as a reference point 🔖 for our awareness.  </p><p id="a783ae59-bcfc-4a21-a5a2-cf0fcbcb6078" class="">1. Bare Attention<div class="indented"><p id="949d7b7e-6adb-4447-8648-5e69a609e790" class="">Clear and single-minded awareness of what actually happens to us and in us, at the successive moments of perception.</p><ul id="7632422c-a94d-4f95-a848-6d7a791529c3" class="bulleted-list"><li>Purpose: assist the mind to ending <em><mark class="highlight-teal">mental proliferation</mark></em> and fabrication<p id="505ecf74-60e2-4c53-8c4d-ceab7416bc14" class=""><em><mark class="highlight-teal">mental proliferation process: </mark></em>Labeling → Judgement → Memory → Intention</p></li></ul><ul id="e5a1367f-815e-469e-b2b0-9775e02b1b3a" class="bulleted-list"><li>Remain undistracted / Eliminate extraneous data</li></ul><ul id="5239a30b-4200-428b-9a59-af22812b8a0e" class="bulleted-list"><li>Realize difference between fiction and reality</li></ul></div></p><p id="8255bf35-71b1-47e9-804f-ae8bffba7b09" class="">2. Interoceptive Awareness 内感<div class="indented"><p id="66f8714d-5713-4103-9531-3786be36bdc7" class="">Perception of the sensations from inside the body, including physical sensations related to internal organ function (e.g. heartbeat, satiety) and autonomic nervous system activity (e.g. fear, anxiety).</p><ul id="c5f9f1c6-ef4f-4739-a8b2-6f2f2ec9400d" class="bulleted-list"><li>sensations are impermanent, it would eventually transform and pass</li></ul><ul id="4b2b26c4-fc97-4f44-be1f-d76f40ce635a" class="bulleted-list"><li><mark class="highlight-teal_background">interpretation &amp; judgement</mark> impact experience</li></ul></div></p><p id="f395c26d-049f-45ae-80ea-3ece4550484d" class="">
-</p><h2 id="6efeaf20-899d-4cc5-aa88-fc55abdb7913" class="">[ Practice ] Body Scan </h2><p id="fb8152b9-0a84-4244-8af1-7fc2e62c2f7c" class="">The intention of the body scan is to help you learn to be fully present and awake to the physical sensations of the <strong><mark class="highlight-teal">body</mark></strong> – whatever they may be in each moment. There are no particular sensations that you are supposed to feel or not feel, but rather it is <mark class="highlight-teal_background">noticing what is present in each moment</mark> that is important. Please follow along with the instructions as best you can, doing what you need to do to take care of yourself, and doing your best to stay awake, alert and present to each passing moment.</p><p id="88ef8fd7-1c12-40f9-942e-ca53d3e7c967" class="">If you can, bring a gentle, kind and investigative quality to this practice. Some of the sensations you experience may be pleasant, some unpleasant, and in some cases you may notice there is no sensation present. As a gentle reminder, there is no “right way” to feel, nothing specific to search for. Simply accepting what is present and giving yourself permission to feel it as completely as you are able is enough. There is no need to try and force relaxation, or control the breath. Just allow yourself to be easy, <mark class="highlight-teal_background">letting go of judgmental or critical thoughts</mark>, noticing when you have drifted off into thought and gently coming back into your body.</p><p id="d6e76d51-dd94-41da-8742-011c671855d2" class="">Remember, you can do it as many times as you like, but try it at least three times this week!</p><p id="a8bd70f2-c939-4861-a105-2b9e451d39fa" class="">
-</p><p id="9a1e9e49-1de6-447a-8fb0-3bffa8164eac" class="">
-</p><figure id="2b55115c-0e65-44ca-82e5-ee37980fa142"><a href="https://www.coursera.org/learn/foundations-of-mindfulness/resources/wguK9" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Coursera | Online Courses &amp; Credentials From Top Educators. Join for Free | Coursera</div><div class="bookmark-description">Learn online and earn valuable credentials from top universities like Yale, Michigan, Stanford, and leading companies like Google and IBM. Join Coursera for free and transform your career with degrees, certificates, Specializations, &amp; MOOCs in data science, computer science, business, and dozens of other topics.</div></div><div class="bookmark-href"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png" class="icon bookmark-icon"/>https://www.coursera.org/learn/foundations-of-mindfulness/resources/wguK9</div></div><img src="https://s3.amazonaws.com/coursera/media/Grid_Coursera_Partners_updated.png" class="bookmark-image"/></a></figure><p id="787f2862-b686-4281-9c26-a176faa4142a" class="">— Knowing, respecting and appreciating your body</p><p id="965e1694-2a10-4679-acec-c7537b9cc0c4" class="">
-</p><hr id="82ee0135-a890-440f-beda-5e8338ff65ec"/><p id="9e42afde-7edb-487b-a56c-9d0c4c481be2" class="">
-</p><h1 id="ba106880-3be9-40a8-b983-034db54a0fe4" class="">Week Three: Exploring Inner Landscape 🌱</h1><p id="ec62a83f-0bf6-41e5-a514-525feb635030" class="">— Inner landscape: bring most compassionate quality </p><div id="fd45bb1c-9972-4a27-bdf1-62cb03472dc9" class="column-list"><div id="5209b05c-ea4c-410b-954c-54cbfa0dd6e5" style="width:50%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="dec027b4-68c4-4dd1-a579-a77d5f4151ab"><div style="font-size:1.5em"><span class="icon">🧘🏻‍♂️</span></div><div style="width:100%">- Identify the relationship between cognitions, emotions, and behaviors
-- Define and identify common cognitive distortions
-- Describe Buddhism&#x27;s Three Marks of Existence
-- Explore relating to thoughts and feelings differently
-- Observe attachments and reactivity in own life</div></figure></div><div id="040eacdc-dfe4-4a95-a638-aa8d442343e4" style="width:50%" class="column"><figure id="9dc8f787-74ec-4feb-9ea7-844867c57a41" class="image"><a href="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/Screen_Shot_2021-05-01_at_12.43.38_PM.png"><img style="width:2066px" src="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/Screen_Shot_2021-05-01_at_12.43.38_PM.png"/></a><figcaption>Intertwined</figcaption></figure></div></div><ul id="a05d1886-f36f-497a-a6be-fb5c411a03e3" class="bulleted-list"><li>The Conditioned Mind<p id="871d7ad7-7f4b-4181-805d-a8969ffb0a55" class=""><strong><mark class="highlight-purple">Thoughts</mark></strong> &amp; mental filters that we have for interpreting and labeling events have a direct impact on our internal emotional experience — what you <mark class="highlight-purple_background">think</mark> is what you <mark class="highlight-purple_background">feel</mark> ~circular relationship♻️</p><ul id="970b5ee9-c685-4d0c-bdeb-d30eea939b14" class="bulleted-list"><li>Negative thinking is a core aspect of depression — Dr. Aaron Beck</li></ul><ul id="9a502d3c-b3ce-4087-ba54-6a145aa62bbb" class="bulleted-list"><li><strong><mark class="highlight-purple">Cognitive Process</mark></strong>: thoughts, images, beliefs and attitudes</li></ul><ul id="b109c575-89f2-4ea2-a662-f5e514ce3956" class="bulleted-list"><li><strong><mark class="highlight-purple">Catch Ourselves in Action: </mark></strong>become observers of the mind </li></ul></li></ul><p id="811882c8-9bb2-49da-a207-148ad008b1ee" class="">
-</p><h2 id="8f9f7353-efa4-4daa-b75b-6caca09f5cc1" class="">Origins of Modern Mindfulness </h2><div id="f2ac0378-1f67-442e-b4ad-ec00d74ebb1e" class="column-list"><div id="60df339e-3461-4893-bbab-8c1014e0c408" style="width:37.5%" class="column"><ul id="f0496c51-59c9-41bb-aea3-8ca5f845c19e" class="bulleted-list"><li><strong><mark class="highlight-teal">M</mark></strong><strong>indfulness </strong><strong><mark class="highlight-teal">B</mark></strong><strong>ased </strong><strong><mark class="highlight-teal">S</mark></strong><strong>tress </strong><strong><mark class="highlight-teal">R</mark></strong><strong>eduction - MBSR</strong><p id="66b52f48-8360-43d5-ad1a-077d9dab6e54" class="">Eight-week program to lower stress and enhance well-being</p><p id="8aff4f80-2bf0-493f-a231-b3122a28ed49" class="">Late 70s</p></li></ul><p id="cd1d11c3-d402-43e0-aa1e-2b84eced1927" class="">
-</p></div><div id="4c33f919-d675-42f1-b0bf-d32038511b8e" style="width:62.5%" class="column"><ul id="b18eac11-382c-49e4-bc46-d51bcab54af0" class="bulleted-list"><li><strong>Buddhism Enlightenment 三法印</strong><ul id="426ecd65-89a6-4dba-8dcd-33f09b6db712" class="bulleted-list"><li>Everything is always in process 🌊 一切行<strong><mark class="highlight-blue">无常</mark></strong><p id="e0b7535f-23bb-47e3-b5be-2be38d03f2d7" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇒</span></span></span></span></span><span>﻿</span></span> everything is impermanent</p></li></ul><ul id="c4d08663-7801-4c23-b403-22f89be2682e" class="bulleted-list"><li>Life is impersonal and imperfect 一切法<strong><mark class="highlight-blue">无我</mark></strong><p id="f82391cb-c9ff-41e3-8091-0296ad952321" class="">joy &amp; sorrow are inherent</p><p id="2c3718d9-003a-480b-89d4-6b8c715fbcc8" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>⇒</mo></mrow><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.36687em;vertical-align:0em;"></span><span class="mrel">⇒</span></span></span></span></span><span>﻿</span></span> suffering is optional:</p><p id="1dc4b78e-a1c8-4474-8e18-11156782b53a" class=""><strong><mark class="highlight-blue">pause</mark></strong> in the midst of pain, <strong><mark class="highlight-blue">observe</mark></strong> the feelings</p></li></ul><ul id="e6925e32-9d97-47d8-85fe-5888aad4c9b9" class="bulleted-list"><li>We are a cohesive and fixed self <strong><mark class="highlight-blue">涅槃</mark></strong>寂灭</li></ul></li></ul></div></div><p id="0d355379-57c0-4f51-8c5f-ac6820368b19" class="">
-</p><h2 id="5afff056-8c21-40bd-af73-a01697cb3d2b" class="">[ Practice ] Sitting Meditation</h2><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="1c9336e2-e349-47d0-bb40-5aa0a0a7c06d"><div style="font-size:1.5em"><span class="icon">🧘🏻‍♂️</span></div><div style="width:100%">Settling into a posture that for you feels representative of dignity, wakefulness.
-Posture that allows you to be relaxed but alert.</div></figure><p id="40dc9d0b-b609-4587-bc37-8b5d817f51e8" class="">When we practice sitting, we are making a special time and place for non-doing, for simply being still. We consciously adopt an alert and relaxed body posture so that we can feel relatively comfortable without moving, and then we do our best to stay grounded in each present moment while noticing various aspects of our experience.</p><ul id="2b5f3d55-fbd1-4686-ae46-f4f272106483" class="bulleted-list"><li>Posture<p id="df44aaf3-7140-4724-b160-877da220285d" class="">It helps to adopt an erect and dignified posture, with your head, neck, and back aligned vertically.This allows the breath to flow most easily.</p><ul id="6dd97fda-b9cb-48e1-9f92-f4ee4d4baee5" class="bulleted-list"><li>a physical manifestation of the inner attitudes of dignity, self-acceptance, and alert attention that we are cultivating</li></ul><ul id="7e6e4339-4d42-41f6-9d8d-7ee90d55e47d" class="bulleted-list"><li>practice the sitting meditation either on a chair or on the floor. If you choose a chair, choose one that has a straight back and that allows your feet to be flat on the floor</li></ul><p id="aac09fdd-dc3d-48c2-8cfc-5e114949b1b3" class="">try to keep the back, neck, and head <strong><mark class="highlight-blue">aligned in the vertical</mark></strong>, to relax the shoulders, and to do something comfortable with your hands</p></li></ul><ul id="1271cc0c-b5a2-461e-aaad-c2a6f44df379" class="bulleted-list"><li>Initial Focus on Breath<p id="2b87b84e-01bc-4f8a-a095-23ba59ee2d6c" class="">standard sitting practice is to bring attention to our breathing — keep our attention anchored to the sensations of the breath</p><p id="989e688e-a367-4820-95e7-04457a6c6f43" class="">We feel it come in, we feel it go out. We stay connected to what is happening in the present, moment by moment, breath by breath. It sounds simple, and it is. Full awareness on the in-breath, full awareness on the outbreath. Letting the breath just happen, observing it, feeling all the sensations associated with it.</p><p id="d756491b-dddf-4fbb-aca0-cb26eb5df327" class="">
-</p></li></ul><ul id="8e4a94f9-6dda-4cd5-87bf-6b10816898eb" class="bulleted-list"><li><mark class="highlight-blue_background">Stillness</mark> ~ Dynamic Process<p id="3acc3d23-591c-45d8-a818-1a027442feee" class="">In fact, if you think you are sitting in stillness with nary a thought to distract you, you are likely so lost in thought that you don’t even know that you are thinking. But don’t worry, this is inevitable. Over time and with discipline, you will begin to notice that your attention has left the breath, and you will begin to see the frequency of your wandering mind.</p></li></ul><p id="dc9402fa-97bc-4f72-a129-46def48cf075" class="">
-</p><ul id="c9b70b37-169a-4488-8e5a-1252dabbcc8a" class="bulleted-list"><li><mark class="highlight-blue_background">Emptiness</mark> ~ Deepening Practice<p id="1750d179-ead5-4e6a-8564-53269eb039e2" class="">At this point, you might be wondering why it is that your mind is so quick to be bored and why your body is so restless and uncomfortable. You might wonder what’s behind your impulse to fill each moment with something. Or what is behind your need to be entertained whenever you have an “empty” moment. Or why you feel so compelled to jump up and get going, to get back to doing and being busy? </p><p id="1098ce90-10f9-442e-bd75-ce4f8999a20d" class="">The question of what drives the body and mind to reject being still is a good one. But in practicing meditation we don’t try to answer these questions. Rather, we just <mark class="highlight-blue_background">observe the impulse</mark> to get up or the thoughts that come into the mind. And instead of jumping up and doing whatever the mind decides is next on the agenda, we gently but firmly <mark class="highlight-blue_background">bring our attention back to the breath</mark>, and continue to watch it, moment by moment.</p><p id="9e6b9a03-495c-44ee-ad2d-3a238d8352ae" class="">This inclination to wonder why the mind is like this is natural, but in the practice of mindfulness meditation, we are less concerned with the mysteries of the mind, and are instead attempting to focus our energies on learning to accept each moment as it is without reacting to how it is. By doing so, you are training your mind to be <mark class="highlight-blue_background">less reactive and more stable</mark>. You’re making each moment count. You’re taking each moment <strong><mark class="highlight-blue">as it comes</mark></strong>, not valuing any one above any other. In this way you are cultivating your natural ability for concentration and focus.</p><p id="26034c7e-60ed-43c1-854d-96f013d58e18" class="">By repeatedly bringing your attention back to the breath each time it wanders off, concentration builds and deepens, similar to how muscles develop by repetitively lifting weights. Mindfulness meditation doesn’t involve pushing thoughts away or trying to stop our thoughts as they cascade through the mind. We are simply making room for them, observing them as thoughts, and letting them be, using the breath as our anchor for observing, and continuing to remind ourselves to stay focused and calm.</p><p id="af0ca4d9-25ba-4612-b498-e832b019aee9" class="">
-</p></li></ul><ul id="ed1b7411-63d1-4e3d-8cfc-4515f83ea7a4" class="bulleted-list"><li>Non-Judgement<p id="8a8f1538-da52-4ee0-9b37-1b5e6ce204cf" class="">At the same time, you’re also developing patience and practicing being <strong><mark class="highlight-blue">non-judgmental</mark></strong>. You’re not giving yourself a hard time because your mind left the breath. When you notice that your mind has wandered, you simply and matter-of-factly return it to the breath, gently but firmly.</p><p id="b22fd8c4-15c5-46c7-a717-72b9d2093bd2" class="">Our capacity to bring more generalized mindful awareness to our daily life requires regular sitting practice and a <mark class="highlight-blue_background">kind and spacious heart</mark>. If you can commit to sitting with awareness every day, you will gradually find that you are more present, focused and centered throughout your day!</p></li></ul><p id="b3f50877-fd69-42be-b882-0b479dd337b6" class="">
-</p><hr id="3cdeb553-e7de-48a6-9cce-db67a6fd72cb"/><h1 id="66ea6f53-cbaf-46e0-af05-02709801069f" class="">Week Four: The Nuts and Bolts of Establishing a Practice 🗻</h1><p id="81a7aa41-c38f-4578-bd92-de33253e696e" class="">— Sustainable Life Practice: incorporate mindfulness into daily life</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="493fd572-d7a1-4b4b-bef1-1b2cb95d1a2a"><div style="font-size:1.5em"><span class="icon">🗻</span></div><div style="width:100%">Explain the best practices associated with establishing a habit
-Identify location, furnishings and light of regular meditation space
-Compare available commitment devices and select one that will help you remember and prioritize meditation
-Identify common barriers to practice, and describe strategies for avoiding them
-Create a long term mindfulness practice plan that is sustainable
-Assess the cumulative personal impact of the various mindfulness practices included in the course</div></figure><p id="5aff59e2-c7bb-45a9-b2c3-7eb9b19879fc" class="">
-</p><h2 id="a4e166e0-db6b-4585-83af-3a6c3e0e6300" class="">Setting the Stage for Practice</h2><ul id="e5852824-3f71-40d3-8ea8-e8b1279f5a5d" class="bulleted-list"><li>🥇 Get Clear on Your Purpose<p id="b00fd4d1-f82b-4ac3-962c-441e25d15cbc" class=""><mark class="highlight-red_background">WHY?</mark> : need a <em><mark class="highlight-red">positive, self-edifying</mark></em> reason for taking on the challenge </p><p id="887e4c89-c7f6-4825-8dcb-e79486229da9" class="">— every moment offers us the chance to begin again</p></li></ul><ul id="9d21452e-55a4-4691-9335-95b29e19dfaf" class="bulleted-list"><li>Do Your Best to Have a Growth Mindset<p id="0d497130-a5f4-437f-8e9a-8b50cb1768d8" class="">take <mark class="highlight-red"><em>all or nothing</em></mark> off the table</p></li></ul><ul id="3f4191f4-f52f-4b7d-886f-84efc51466c0" class="bulleted-list"><li>Create a Sacred Space<p id="0164c73f-d804-4ca3-a0f9-8a5a54add33b" class="">pick <mark class="highlight-red"><em>one space</em></mark> to meditate in regularly, minimalist approach to decorating your meditation area</p></li></ul><ul id="dccaddd9-7f17-4a5c-88e2-2bfb3e2630da" class="bulleted-list"><li><mark class="highlight-red_background">WHEN?</mark> to Practice<p id="04f14c4c-fe24-4442-99b2-151058a1e1fc" class="">💡 attempt to practice at the <em><mark class="highlight-red">same time every day </mark></em>— 20 mins a day, 20 mins seems to be the optimal threshold from psychology study</p><p id="39ba508f-b372-4b55-8f2c-a8d5301a39d6" class="">How long to practice — <em><mark class="highlight-red">starts small</mark></em> and build up slowly</p></li></ul><ul id="46357565-8070-41d6-99ec-7e8bb9c57d73" class="bulleted-list"><li>Commitment Systems &amp; Accountability<figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="a76e6fee-2c6f-4b7f-a5c2-7693e4cba3c6"><div style="font-size:1.5em"><span class="icon">⚙️</span></div><div style="width:100%">Commitment Devices: you put into present to lock you into a certain course of action in the future — e.g. time log of the number of mindfulness practice times</div></figure><p id="5bd5ff68-7d61-4b6b-b310-a76993de615f" class="">Help to develop into a habit</p></li></ul><p id="760a43fe-61da-418b-ba0c-e03582b5a094" class="">
-</p><ul id="04fc57bf-ef4a-4fc9-b46e-5b47ca3594e5" class="bulleted-list"><li>Common <mark class="highlight-red_background">Obstacles</mark> of Mindfulness Practice<p id="8dab976d-c025-43c0-830e-9a30366cde34" class="">Practice is always not easy, discipline helps </p><ul id="f237cd4e-aff3-4987-9175-6d83f91cdc48" class="bulleted-list"><li><strong><mark class="highlight-red">Doubt</mark></strong>: whether or not mindfulness will work...  </li></ul><ul id="b1053f76-a336-4cc1-9f4a-a2ae2467eda4" class="bulleted-list"><li><strong><mark class="highlight-red">Restlessness &amp; Distractions</mark></strong>: slow down and settle in ... <p id="ff06c186-16da-4018-9bef-ae6b3a3b6392" class="">take the time for brain to rewire itself to cultivate awareness </p><p id="9a794d70-4f99-41db-97e6-f63470391f75" class="">Problem is thinking without knowing your are thinking — Noticing the wandering mind ⚠️  </p></li></ul><ul id="cb6a0cd7-74a5-45bb-b747-61f133d07f03" class="bulleted-list"><li><strong><mark class="highlight-red">Irritation</mark></strong>: @adage: what we resist persists </li></ul><ul id="1d652952-456f-4261-9315-b13454503f35" class="bulleted-list"><li><strong><mark class="highlight-red">Sleepiness</mark></strong>: tendency to fall asleep </li></ul><ul id="99df7136-9f8b-4426-88b4-aa175cebf7f1" class="bulleted-list"><li><strong><mark class="highlight-red">Wanting &amp; Desire</mark></strong>:  🙅🏻 wanting things to be not what they are</li></ul></li></ul><p id="a435d686-2fd5-4043-86a6-db9dc34eeda9" class="">
-</p><h2 id="e1916943-344a-4b19-b836-ed6d954188e6" class="">Noticing the Wandering Mind</h2><blockquote id="7542781b-0f24-4b17-b0d2-1810426ea983" class="">“The problem isn’t with thinking in and of itself. The problem is thinking without knowing you are thinking.” - Sam Harris</blockquote><p id="49290030-b5ee-4eb1-b471-3d9c1f23d4b4" class="">A powerful influence taking us away from being “fully present” in each moment is our automatic tendency to <strong><mark class="highlight-red">judge</mark></strong> our experience as being not quite right in some way—that it is not what should be happening, not good enough, or not what we expected or wanted. These judgments can lead to sequences of U<strong><mark class="highlight-red">nhelpful Thinking Styles</mark></strong> thoughts about blame, what needs to be changed, or how things could or should be different. Often, these thoughts will take us, quite automatically, down some fairly well-worn paths in our minds. In this way, we may lose awareness of the moment, and also the freedom to choose what, if any, action needs to be taken.</p><figure id="388c774c-64fc-4b9c-b96b-4f8c04e15d00"><div class="source"><a href="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/unhelp-thinking.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/953977b5-5ec4-4187-bbcc-575b4a47ef98/unhelp-thinking.pdf</a></div></figure><p id="e9518f81-fdef-42a7-afac-fb293869cbe3" class="">
-</p><p id="e26f26ad-2cbf-460e-8bcc-c853c3f37cce" class="">
-</p><h2 id="7d819a34-4317-4456-8bdc-09ff86ebe568" class="">[ Practice ] 🌧️R.A.I.N Meditation: <mark class="highlight-blue"><strong>R</strong></mark>ecognize, <mark class="highlight-blue">A</mark>llow, <mark class="highlight-blue">I</mark>nvestigate and <mark class="highlight-blue">N</mark>urture </h2><figure id="f45543bd-bad4-49ed-9427-c222b7df1295" class="image"><a href="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/Untitled.png"><img style="width:1920px" src="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/Untitled.png"/></a></figure><p id="04b0ba33-5d2c-46e2-a494-3f87830bf2a4" class=""><mark class="highlight-blue_background">RAIN</mark>🌧️, which is an acronym for a four step process that teaches how to <strong><mark class="highlight-blue">R</mark></strong>ecognize, <mark class="highlight-blue"><strong>A</strong></mark>llow, <mark class="highlight-blue"><strong>I</strong></mark>nvestigate and <mark class="highlight-blue"><strong>N</strong></mark>urture difficult emotions, is a guided practice that helps apply mindfulness and self-compassion to challenging emotions — Tara Brach</p><p id="84b83743-9482-4daf-a26f-86294d99931d" class="">Not feeling those negative emotions came at a pretty high price. While burying what was feeling was mildly effective for taking the sting out of the hard emotions, it also took the spark out of the good ones. As it turns out,  we can’t just cherry pick affective experience.</p><p id="183831fd-4b46-41ae-ba56-329a3cf67436" class="">Through <strong><mark class="highlight-blue">mindfulness</mark></strong>, to develop a more balanced relationship with emotions, a relationship that wasn’t predicated on fear or shame. Meditation sessions as a safe place to turn the spotlight of attention on inner life. ⇒ In and through practice, sharpen ability to <mark class="highlight-blue_background">recognize a feeling just as it begins</mark>, and then take steps to investigate its basis so that decide how to nurture or express self in positive and productive ways.</p><ul id="57f8d2e3-28f4-49a5-b4e4-9fe597035ba5" class="bulleted-list"><li><mark class="highlight-blue"><em>Recognize (R)</em></mark> what was going on inside me—the circling of anxious thoughts and guilty feelings.</li></ul><ul id="610294bf-691e-4e53-a8c7-6bb641aa645d" class="bulleted-list"><li><mark class="highlight-blue"><em>Allow (A)</em></mark> what was happening by breathing and <mark class="highlight-blue_background">letting be</mark>. Even though I didn’t like what I was feeling, my intention was not to fix or change anything and, just as important, not to judge myself for feeling anxious or guilty.</li></ul><ul id="742c2ee1-f780-47de-89f1-fdd3811898ab" class="bulleted-list"><li><mark class="highlight-blue"><em>Investigate (I)</em></mark> what felt most difficult with a <mark class="highlight-blue_background">Gentle</mark>, <mark class="highlight-blue_background">Curious Attention</mark>. <p id="84855dbf-0500-41a2-a21c-9cb25af07d03" class="">Now, with interest, I directed my attention to the <mark class="highlight-blue_background">feelings of anxiety</mark> in my body—physical tightness, pulling and pressure around my heart. I asked the anxious part of me what it was believing, and the answer was deeply familiar: It believed I was going to fail. If I didn’t have every teaching and story fleshed out in advance, I’d do a bad job and let people down. But that same anxiety made me unavailable to my mother, so I was also failing someone I loved dearly. As I became conscious of these pulls of guilt and fear, I continued to investigate, contacting that torn, anxious part of myself. I asked, “<mark class="highlight-blue_background">What do you most need right now</mark>?” I could immediately sense that it needed care and reassurance that I was not going to fail in any real way. It needed to trust that the teachings would flow through me, and to trust the love that flows between my mother and me.</p><p id="4a2c9da4-feb6-4f89-a9d6-566f8476e03b" class="">Instead of thinking about what’s going on, keep bringing your <strong><mark class="highlight-blue">attention to your body</mark></strong>, directly <mark class="highlight-blue_background">contacting the felt sense and sen­sations of your most vulnerable place</mark>. Once you are fully pres­ent, listen for what this place truly needs to begin healing.</p></li></ul><ul id="9b2a7b81-2d15-4990-8263-65841bdd7d96" class="bulleted-list"><li><em><mark class="highlight-blue">Nurture (N)</mark></em>, and I sent a gentle message inward, directly to that anxious part: “It’s okay, sweetheart. You’ll be all right; we’ve been through this so many times before…trying to come through on all fronts.” I could feel a warm, comforting energy spreading through my body. Then there was a distinct shift: My heart softened a bit, my shoulders relaxed, and my mind felt more clear and open.<p id="7f8fb7d2-6c56-4699-8c55-d8ecf2e1ae5f" class="">Feel free to experiment with ways of <mark class="highlight-blue_background">befriending your inner life</mark>—whether through words or touch, images or energy. Discover what best allows you to feel nurturing, what best allows the part of you that is most vulnerable to feel loved, seen, and/or safe. Spend as much time as you need, offering care inwardly and letting it be received.</p></li></ul><p id="0920d69e-d847-4b82-aadf-16f089f6640d" class="">
-</p><figure id="314bb4f3-89ab-4fcf-ac2e-183e834b13da"><a href="https://coursera.org/share/807a77efc0eee2af9e9367486d29dc6e" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">R.A.I.N. - The Nuts and Bolts of Establishing a Practice | Coursera</div><div class="bookmark-description">This Course Video Transcript This course provides a broad overview of the fundamental concepts, principles, and practices of mindfulness. With interactive exercises to help students explore their own attitudes, mental habits and behaviors, Foundations of Mindfulness offers a pathway for living with more freedom, authenticity and ease.</div></div><div class="bookmark-href"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png" class="icon bookmark-icon"/>https://coursera.org/share/807a77efc0eee2af9e9367486d29dc6e</div></div><img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/nEoHqV7VRLKKB6le1TSyhA.processed/thumbnails/360p/0.jpg?expiry=1620604800000&amp;hmac=VxScOmVqKi6glRnwzLjR_QtoudCPDL7p_86_HJNZ9hE&amp;auto=format%2Ccompress&amp;dpr=1&amp;w=100%25&amp;h=" class="bookmark-image"/></a></figure><figure id="d6bcc124-2b05-45ee-ad13-ca5e7fe31f10"><a href="https://www.mindful.org/investigate-anxiety-with-tara-brachs-rain-practice/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Practice the RAIN Meditation with Tara Brach - Mindful</div><div class="bookmark-description">In her new book, Tara Brach helps break a trail through the dense forest of anxiety with the practice of RAIN. We all get lost in the dense forest of our lives, entangled in incessant worry and planning, in judgments of others, and in our busy striving to meet demands and solve problems. When we&#x27;re caught in that thicket, it&#x27;s easy to lose sight of what matters most.</div></div><div class="bookmark-href"><img src="https://cdn.mindful.org/cropped-Mindful-logo-blue-550px-1-192x192.png" class="icon bookmark-icon"/>https://www.mindful.org/investigate-anxiety-with-tara-brachs-rain-practice/</div></div><img src="https://cdn.mindful.org/raintb.png" class="bookmark-image"/></a></figure><p id="ffb02ea8-eab8-4b6c-aa46-81bf799d4461" class="">
-</p><p id="31c11b89-34f1-49f6-baba-e7fba0ad5eb9" class="">
-</p><p id="f4eecece-bbc4-42dc-8f15-1d4e7642b665" class="">
-</p><p id="6e0d5b22-8663-4b13-8e4a-0d3126227703" class="">
-</p><p id="3da4d482-5354-41ce-951a-60c85731efc8" class="">— Ending Remarks: Mindfulness practice finds ways to roll around in the <mark class="highlight-teal_background">good stuff</mark>, while gives commitment and fortifies us when the <mark class="highlight-red_background">going gets tough</mark>.</p><p id="76495551-c5c1-4d66-aa2b-4584f2a21874" class="">
-</p><p id="ddddd5b4-c0e6-4a94-87df-b6bba2402eb0" class="">
-</p><hr id="5f3a639e-97ca-433a-a057-345b9d5fc531"/><p id="dbab8677-4360-424e-b2b2-82716e66c245" class="">
-</p><h2 id="7b72cca6-6ff3-4a4e-8764-2198b6ec1b87" class="">Related Materials </h2><p id="ebfeaf29-f012-45fe-9b37-cc6e23211de8" class="">
-</p><figure id="4b70be24-2ca2-44a5-9c54-0883951600a1"><div class="source"><a href="Mindfulness%20%E6%AD%A3%E5%BF%B5%20194d90080a2d4a4b985bb2edb5cf4cb5/MBSR_kabat-zinn2011.pdf">https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1f35ebd-c51b-42b1-8f6c-7b5bc0f9cffe/MBSR_kabat-zinn2011.pdf</a></div></figure><figure id="2d5af442-61da-46aa-b75c-f7897924ee83"><a href="https://thewholeu.uw.edu/2019/01/07/the-meaning-of-mindfulness/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Meaning of Mindfulness</div><div class="bookmark-description">Welcome to the first week of , the 8-week wellness challenge for making lasting, positive change in the New Year! This week, we&#x27;ll be encouraging you to Dare to Pause-taking time to reflect on what your goals are and how to reach them. These days, it seems as if we are surrounded by the concept of mindfulness.</div></div><div class="bookmark-href"><img src="https://thewholeu.uw.edu/wp-content/themes/wholeu/_/img/favicon.png" class="icon bookmark-icon"/>https://thewholeu.uw.edu/2019/01/07/the-meaning-of-mindfulness/</div></div><img src="https://thewholeu.uw.edu/wp-content/uploads/Dare-to-Do-2019_Featured-Image-1-150x150.png" class="bookmark-image"/></a></figure><figure id="ed040b5b-10f0-442c-b77c-4f37eea07e0e"><a href="https://www.coursera.org/learn/foundations-of-mindfulness/home/welcome" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Coursera | Online Courses &amp; Credentials From Top Educators. Join for Free | Coursera</div><div class="bookmark-description">Learn online and earn valuable credentials from top universities like Yale, Michigan, Stanford, and leading companies like Google and IBM. Join Coursera for free and transform your career with degrees, certificates, Specializations, &amp; MOOCs in data science, computer science, business, and dozens of other topics.</div></div><div class="bookmark-href"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png" class="icon bookmark-icon"/>https://www.coursera.org/learn/foundations-of-mindfulness/home/welcome</div></div><img src="https://s3.amazonaws.com/coursera/media/Grid_Coursera_Partners_updated.png" class="bookmark-image"/></a></figure><p id="a9637041-d3b2-4d56-87dc-c7afcb403713" class="">
-</p><ul id="b1c897fc-e2ee-48db-be86-5f8c8aaf278c" class="bulleted-list"><li>Chinese<figure id="4387024b-44fc-46ea-b610-dca09f453e13"><a href="http://www.rushixishe.cn/c/default/a/view/ac/article_detail/articleId/5774ba229ccde23d25fa2032" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">心理学-呼吸-冥想-心理学|美国冥想课程体验-文章详情-如是喜舍</div><div class="bookmark-description">心理学Psychology这个词最初来源于希腊文： Psyche- The Greek word for &quot;Spirit, Soul, and Breath &quot;,Logia- The Greek word for &quot;the study of something&quot;.你可能会跟我一样惊讶的发现：在心理学的最初认知中，呼吸的重要性。我们的生命其实也就在一呼一吸之间。 ...</div></div><div class="bookmark-href">http://www.rushixishe.cn/c/default/a/view/ac/article_detail/articleId/5774ba229ccde23d25fa2032</div></div><img src="http://file.tuweia.cn/cbe78141448d524bfbd81b3eb456da383dcbf388.jpg?imageMogr2/thumbnail/267x9999%3E/quality/90" class="bookmark-image"/></a></figure></li></ul></div></article></body></html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Sentra - Free Bootstrap Theme</title>
+        
+<!-- 
+
+Sentra Template
+
+https://templatemo.com/tm-518-sentra
+
+-->
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/light-box.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+
+
+
+        <header class="nav-down responsive-nav hidden-lg hidden-md">
+            <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <nav>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#top">Home</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#projects">Recent Projects</a></li>
+                        <li><a href="#video">Presentation</a></li>
+                        <li><a href="#blog">Blog Entries</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="sidebar-navigation hidde-sm hidden-xs">
+            <div class="logo">
+                <a href="#">Sen<em>tra</em></a>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#top">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#featured">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Featured
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projects">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Recent Work
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#video">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Presentation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#blog">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Blog Entires
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <span class="rect"></span>
+                            <span class="circle"></span>
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="slider">
+            <div class="Modern-Slider content-section" id="top">
+                <!-- Item -->
+                <div class="item item-1">
+                    <div class="img-fill">
+                    <div class="image"></div>
+                    <div class="info">
+                        <div>
+                          <h1>Beautiful Template<br>Sentra</h1>
+                          <p>Sentra is free Bootstrap CSS Template by templatemo website.<br>
+                          	Please share our site link to your friends.</p>
+                          <div class="white-button button">
+                              <a href="#featured">Discover More</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-2">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        <div class="info">
+                        <div>
+                          <h1>Please tell <br>your friends</h1>
+                          <p>Support templatemo by sharing a link to your friends.
+							<br>Thank you for helping us.</p>
+                          
+                          <div class="white-button button">
+                              <a href="#featured">Share More</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+                <!-- Item -->
+                <div class="item item-3">
+                    <div class="img-fill">
+                        <div class="image"></div>
+                        <div class="info">
+                        <div>
+                          <h1>Suspendisse suscipit<br>nulla sed</h1>
+                          <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices <br>posuere cubilia Curae; Sed at massa turpis.</p>
+                          
+                          <div class="white-button button">
+                              <a href="#featured">Learn More</a>
+                          </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Item -->
+            </div>
+        </div>
+
+
+        <div class="page-content">
+            <section id="featured" class="content-section">
+                <div class="section-heading">
+                    <h1>Featured<br><em>Places</em></h1>
+                    <p>Praesent pellentesque efficitur magna, 
+                    <br>sed pellentesque neque malesuada vitae.</p>
+                </div>
+                <div class="section-content">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_1.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Lorem ipsum dolor</h4>
+                                <span>Proin et sapien</span>
+                                <p>#1 You are allowed to use Sentra Template for your business or client websites. You can use it for commercial or non-commercial or educational purposes.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_2.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Phasellus a lacus ac odio</h4>
+                                <span>Maximus</span>
+                                <p>#2 You are NOT allowed to re-distribute this on any template website. You <strong>can post</strong> a screenshot and a link back to original template page on your blog or site. Thank you.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_3.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Proin sit amet fringilla</h4>
+                                <span>Vulputate</span>
+                                <p>#3 Aliquam mollis lacus eget metus efficitur lobortis. Suspendisse libero lacus, accumsan vitae commodo tristique, luctus gravida metus.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_2.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>In volutpat augue lectus</h4>
+                                <span>Elementum</span>
+                                <p>#4 Aliquam mollis lacus eget metus efficitur lobortis. Suspendisse libero lacus, accumsan vitae commodo tristique, luctus gravida metus.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_1.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Cras commodo odio</h4>
+                                <span>Aliquam</span>
+                                <p>#5 Mauris lacinia pretium libero, ut tincidunt lacus molestie ornare. Phasellus a facilisis erat. Praesent eleifend nibh mauris, quis sodales lorem convallis pulvinar.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_3.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Sed at massa turpis</h4>
+                                <span>Curabitur</span>
+                                <p>#6 Vestibulum tincidunt ornare ligula vel molestie. Curabitur hendrerit mauris mollis ipsum vulputate rutrum. Phasellus luctus odio eget dui imperdiet.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_2.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Aliquam mollis lacus</h4>
+                                <span>Suspendisse</span>
+                                <p>#7 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus pharetra in.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_1.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Mauris lacinia pretium</h4>
+                                <span>Vestibulum</span>
+                                <p>#8 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus pharetra in.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="image">
+                                <img src="img/featured_3.jpg" alt="">
+                                <div class="featured-button button">
+                                    <a href="#projects">Continue Reading</a>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h4>Proin sit amet fringilla erat</h4>
+                                <span>Convallis</span>
+                                <p>#9 Suspendisse suscipit nulla sed nisl fermentum, auctor suscipit nunc rhoncus. Proin faucibus metus diam, nec hendrerit purus pharetra in.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="projects" class="content-section">
+                <div class="section-heading">
+                    <h1>Recent<br><em>Projects</em></h1>
+                    <p>Praesent pellentesque efficitur magna, 
+                    <br>sed pellentesque neque malesuada vitae.</p>
+                </div>
+                <div class="section-content">
+                    <div class="masonry">
+                        <div class="row">
+                            <div class="item">
+                                <div class="col-md-8">
+                                    <a href="img/portfolio_big_1.jpg" data-lightbox="image"><img src="img/portfolio_1.jpg" alt="image 1"></a>
+                                </div>
+                            </div>
+                            <div class="item second-item">
+                                <div class="col-md-4">
+                                    <a href="img/portfolio_big_2.jpg" data-lightbox="image"><img src="img/portfolio_2.jpg" alt="image 2"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4">
+                                    <a href="img/portfolio_big_3.jpg" data-lightbox="image"><img src="img/portfolio_3.jpg" alt="image 3"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-4">
+                                    <a href="img/portfolio_big_4.jpg" data-lightbox="image"><img src="img/portfolio_4.jpg" alt="image 4"></a>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-md-8">
+                                    <a href="img/portfolio_big_5.jpg" data-lightbox="image"><img src="img/portfolio_5.jpg" alt="image 5"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </section>
+            <section id="video" class="content-section">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <h1>This is a <em>company</em> presentation.</h1>
+                            <p>Praesent pellentesque efficitur magna, sed pellentesque neque malesuada vitae.</p>
+                        </div>
+                        <div class="text-content">
+                            <p>In eget ipsum sed lorem vehicula luctus. Curabitur non dolor rhoncus, hendrerit justo sit amet, vestibulum turpis. Pellentesque id auctor tellus, vel ultricies augue. Duis condimentum aliquet blandit. Fusce rhoncus et eros ut pharetra. Phasellus convallis ultricies ligula ac gravida.</p>
+                        </div>
+                        <div class="accent-button button">
+                            <a href="#blog">Continue Reading</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="box-video">
+                            <div class="bg-video" style="background-image: url(https://unsplash.imgix.net/photo-1425036458755-dc303a604201?fit=crop&fm=jpg&q=75&w=1000);">
+                                <div class="bt-play">Play</div>
+                            </div>
+                            <div class="video-container">
+                                <iframe width="100%" height="520" src="https://www.youtube.com/embed/j-_7Ub-Zkow?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blog" class="content-section">
+                <div class="section-heading">
+                    <h1>Blog<br><em>Entries</em></h1>
+                    <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
+                    <br>Phasellus luctus odio eget dui imperdiet.</p>
+                </div>
+                <div class="section-content">
+                    <div class="tabs-content">
+                        <div class="wrapper">
+                            <ul class="tabs clearfix" data-tabgroup="first-tab-group">
+                              <li><a href="#tab1" class="active">July 2018</a></li>
+                              <li><a href="#tab2">June 2018</a></li>
+                              <li><a href="#tab3">May 2018</a></li>
+                              <li><a href="#tab4">April 2018</a></li>
+                            </ul>
+                            <section id="first-tab-group" class="tabgroup">
+                                <div id="tab1">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_1.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Integer ultrices augue</h4>
+                                                    <span>25 July 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_2.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Cras commodo odio ut</h4>
+                                                    <span>16 July 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_3.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Sed at massa turpis</h4>
+                                                    <span>10 July 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tab2">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_3.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Sed at massa turpis</h4>
+                                                    <span>30 June 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_1.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Lorem ipsum dolor sit</h4>
+                                                    <span>24 June 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_2.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Cras commodo odio ut</h4>
+                                                    <span>12 June 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tab3">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_2.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Cras commodo odio ut</h4>
+                                                    <span>26 May 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_1.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Lorem ipsum dolor sit</h4>
+                                                    <span>22 May 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_3.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Integer ultrices augue</h4>
+                                                    <span>8 May 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="tab4">
+                                    <ul>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_1.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Lorem ipsum dolor sit</h4>
+                                                    <span>26 April 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>                                
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_3.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Integer ultrices augue eu</h4>
+                                                    <span>24 April 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item">
+                                                <img src="img/blog_2.jpg" alt="">
+                                                <div class="text-content">
+                                                    <h4>Cras commodo odio ut</h4>
+                                                    <span>20 April 2018</span>
+                                                    <p>Nam vel egestas nisi. Nullam lobortis magna at enim venenatis luctus. Nam finibus, mauris eu dictum iaculis, dolor tortor cursus quam, in volutpat augue lectus sed magna. Integer mollis lorem quis ipsum maximus finibus.</p>
+                                                    
+                                                    <div class="accent-button button">
+                                                        <a href="#contact">Continue Reading</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section> 
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="content-section">
+                <div id="map">
+                
+                	<!-- How to change your own map point
+                           1. Go to Google Maps
+                           2. Click on your location point
+                           3. Click "Share" and choose "Embed map" tab
+                           4. Copy only URL and paste it within the src="" field below
+                    -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1197183.8373802372!2d-1.9415093691103689!3d6.781986417238027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85efd%3A0xb8d1e0b88af1f0f5!2sKumasi+Central+Market!5e0!3m2!1sen!2sth!4v1532967884907" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div id="contact-content">
+                    <div class="section-heading">
+                        <h1>Contact<br><em>Sentra</em></h1>
+                        <p>Curabitur hendrerit mauris mollis ipsum vulputate rutrum. 
+                        <br>Phasellus luctus odio eget dui imperdiet.</p>
+                        
+                    </div>
+                    <div class="section-content">
+                        <form id="contact" action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-4">
+                                  <fieldset>
+                                    <input name="email" type="email" class="form-control" id="email" placeholder="Your email..." required="">
+                                  </fieldset>
+                                </div>
+                                 <div class="col-md-4">
+                                  <fieldset>
+                                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..." required="">
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                  </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                  <fieldset>
+                                    <button type="submit" id="form-submit" class="btn">Send Message Now</button>
+                                  </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="footer">
+                <p>Copyright &copy; 2019 Company Name 
+                
+                . Design: TemplateMo</p>
+            </section>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/vendor/bootstrap.min.js"></script>
+    
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Hide Header on on scroll down
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $('header').outerHeight();
+
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+            
+            // Make sure they scroll more than delta
+            if(Math.abs(lastScrollTop - st) <= delta)
+                return;
+            
+            // If they scrolled down and are past the navbar, add class .nav-up.
+            // This is necessary so you never see what is "behind" the navbar.
+            if (st > lastScrollTop && st > navbarHeight){
+                // Scroll Down
+                $('header').removeClass('nav-down').addClass('nav-up');
+            } else {
+                // Scroll Up
+                if(st + $(window).height() < $(document).height()) {
+                    $('header').removeClass('nav-up').addClass('nav-down');
+                }
+            }
+            
+            lastScrollTop = st;
+        }
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+
+</body>
+</html>
