@@ -53,7 +53,7 @@ p {
 .section-heading em {
   font-style: normal;
   font-weight: 700;
-  color: #45489a;
+  color: #ade2e6;
 }
 
 .section-heading p {
@@ -68,7 +68,7 @@ p {
 .white-button a {
   font-size: 13px;
   font-weight: 600;
-  color: #45489a;
+  color: #ade2e6;
   text-transform: capitalize;
   background-color: #fff;
   display: inline-block;
@@ -81,7 +81,7 @@ p {
 }
 
 .white-button a:hover {
-  background-color: #45489a;
+  background-color: #ade2e6;
   color: #fff;
 }
 
@@ -90,7 +90,7 @@ p {
   font-weight: 600;
   color: #fff;
   text-transform: capitalize;
-  background-color: #45489a;
+  background-color: #ade2e6;
   display: inline-block;
   height: 44px;
   line-height: 44px;
@@ -102,7 +102,7 @@ p {
 
 .accent-button a:hover {
   background-color: #fff;
-  color: #45489a;
+  color: #ade2e6;
 }
 
 header {
@@ -265,9 +265,9 @@ header {
   left: 0;
   bottom: 5.5px;
   background-color: #fff;
-  -webkit-transition: -webkit-transform 0.3s, width 0.7s;
-  -moz-transition: -webkit-transform 0.3s, width 0.7s;
-  transition: transform 0.3s, width 0.7s;
+  -webkit-transition: -webkit-transform 0.1s, width 0.7s;
+  -moz-transition: -webkit-transform 0.1s, width 0.7s;
+  transition: transform 0.1s, width 0.7s;
 }
 .sidebar-navigation nav a:focus {
   color: #fff;
@@ -311,7 +311,7 @@ header {
 }
 
 .sidebar-navigation .social-icons li a:hover {
-  color: #45489a;
+  color: #ade2e6;
 }
 
 
@@ -624,28 +624,74 @@ header {
 
 /* Video Presentation Style */
 
-#video {
+#bodyScan {
   text-align: center;
   background-color: #f4f4f4;
   padding: 100px 60px;
 }
 
-#video .section-heading {
+#bodyScan .section-heading {
   margin-bottom: 30px;
   text-align: center;
 }
 
-#video .section-heading h1 {
+#bodyScan .section-heading h1 {
   display: block;
   margin: 0px;
 }
 
-#video .section-heading p {
+#bodyScan .section-heading p {
   position: relative;
   margin: 0px;
 }
 
-#video .accent-button {
+#sit {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 100px 60px;
+}
+
+#sit .section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#sit .section-heading h1 {
+  display: block;
+  margin: 0px;
+}
+
+#sit .section-heading p {
+  position: relative;
+  margin: 0px;
+}
+
+#rain {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 100px 60px;
+}
+
+#rain .section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#rain .section-heading h1 {
+  display: block;
+  margin: 0px;
+}
+
+#rain .section-heading p {
+  position: relative;
+  margin: 0px;
+}
+
+
+
+
+
+#projects .accent-button {
   margin-top: 30px;
 }
 
@@ -739,7 +785,7 @@ header {
   height: 90px;
   width: 100%;
   background-color: #eee;
-  border-bottom: 10px solid #45489a;
+  border-bottom: 10px solid #ade2e6;
 }
 
 #blog .tabs li {
@@ -765,7 +811,7 @@ header {
 }
 
 #blog .tabs a:hover {
-  color: #45489a;
+  color: #ade2e6;
 }
 
 
@@ -774,7 +820,7 @@ header {
 }
 
 #blog .tabs .active {
-  background-color: #45489a;
+  background-color: #ade2e6;
   color: #fff;
 }
 
@@ -893,7 +939,7 @@ header {
   font-weight: 600;
   color: #fff;
   text-transform: capitalize;
-  background-color: #45489a;
+  background-color: #ade2e6;
   display: inline-block;
   height: 44px;
   line-height: 24px;
