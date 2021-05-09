@@ -666,6 +666,28 @@ header {
   margin: 0px;
 }
 
+#explore {
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 100px 60px;
+}
+
+#explore .section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#explore .section-heading h1 {
+  display: block;
+  margin: 0px;
+}
+
+#explore .section-heading p {
+  position: relative;
+  margin: 0px;
+}
+
+
 #rain {
   text-align: center;
   background-color: #f4f4f4;
