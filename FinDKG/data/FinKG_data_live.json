@@ -1,0 +1,696 @@
+{
+    "nodes": [
+        {
+            "id": "2",
+            "name": "China",
+            "group": 1,
+            "value": 25.64
+        },
+        {
+            "id": "3",
+            "name": "U.S. Federal Reserve",
+            "group": 7,
+            "value": 20.09
+        },
+        {
+            "id": "1",
+            "name": "United States",
+            "group": 1,
+            "value": 30.67
+        },
+        {
+            "id": "3333",
+            "name": "Public-health",
+            "group": 8,
+            "value": 14.88
+        },
+        {
+            "id": "5",
+            "name": "COVID-19",
+            "group": 3,
+            "value": 20.06
+        },
+        {
+            "id": "512",
+            "name": "Omicron",
+            "group": 3,
+            "value": 10.81
+        },
+        {
+            "id": "132",
+            "name": "Stocks",
+            "group": 4,
+            "value": 17.77
+        },
+        {
+            "id": "4239",
+            "name": "Strike",
+            "group": 3,
+            "value": 12.64
+        },
+        {
+            "id": "400",
+            "name": "Consumer Prices",
+            "group": 9,
+            "value": 12.91
+        },
+        {
+            "id": "24",
+            "name": "S&P500",
+            "group": 4,
+            "value": 16.35
+        },
+        {
+            "id": "25",
+            "name": "Inflation",
+            "group": 9,
+            "value": 23.32
+        },
+        {
+            "id": "291",
+            "name": "Global Economy",
+            "group": 8,
+            "value": 15.98
+        },
+        {
+            "id": "36",
+            "name": "Dow Jones Industrial",
+            "group": 4,
+            "value": 14.44
+        },
+        {
+            "id": "1191",
+            "name": "Housing market",
+            "group": 11,
+            "value": 12.77
+        },
+        {
+            "id": "1833",
+            "name": "U.S. Stock Indexes",
+            "group": 4,
+            "value": 11.38
+        },
+        {
+            "id": "171",
+            "name": "Covid Pandemic Response",
+            "group": 3,
+            "value": 13.09
+        },
+        {
+            "id": "1073",
+            "name": "Energy Prices",
+            "group": 9,
+            "value": 14.66
+        },
+        {
+            "id": "316",
+            "name": "Consumer Spending",
+            "group": 9,
+            "value": 14.85
+        },
+        {
+            "id": "583",
+            "name": "Labor Market",
+            "group": 8,
+            "value": 15.1
+        },
+        {
+            "id": "975",
+            "name": "Recession",
+            "group": 3,
+            "value": 14.3
+        },
+        {
+            "id": "2128",
+            "name": "Russia  Ukraine War",
+            "group": 3,
+            "value": 16.18
+        },
+        {
+            "id": "472",
+            "name": "Stock market",
+            "group": 4,
+            "value": 14.06
+        },
+        {
+            "id": "91",
+            "name": "Interest Rates",
+            "group": 9,
+            "value": 17.79
+        },
+        {
+            "id": "98",
+            "name": "U.S. Economy",
+            "group": 1,
+            "value": 14.62
+        },
+        {
+            "id": "483",
+            "name": "Economic growth",
+            "group": 8,
+            "value": 14.41
+        },
+        {
+            "id": "1004",
+            "name": "Jobless Claims",
+            "group": 9,
+            "value": 13.74
+        },
+        {
+            "id": "111",
+            "name": "Economy",
+            "group": 8,
+            "value": 19.45
+        }
+    ],
+    "links": [
+        {
+            "source": "2",
+            "target": "5",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "2",
+            "target": "111",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "2",
+            "target": "291",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "2",
+            "target": "472",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "2",
+            "target": "1",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "2",
+            "target": "3333",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "2",
+            "target": "171",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "2",
+            "target": "25",
+            "value": 1,
+            "name": "Has"
+        },
+        {
+            "source": "3",
+            "target": "111",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "3",
+            "target": "91",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "3",
+            "target": "583",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "3",
+            "target": "25",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "3",
+            "target": "24",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "3",
+            "target": "400",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "3",
+            "target": "98",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "3",
+            "target": "132",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "3",
+            "target": "975",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "3",
+            "target": "483",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "3",
+            "target": "1191",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "3",
+            "target": "316",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "1",
+            "target": "3333",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "1",
+            "target": "2128",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "1",
+            "target": "316",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "1",
+            "target": "583",
+            "value": 1,
+            "name": "Introduce"
+        },
+        {
+            "source": "1",
+            "target": "25",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "1",
+            "target": "91",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "1",
+            "target": "2",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "1",
+            "target": "291",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "1",
+            "target": "1073",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "1",
+            "target": "5",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "1",
+            "target": "975",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "1",
+            "target": "1004",
+            "value": 1,
+            "name": "Has"
+        },
+        {
+            "source": "1",
+            "target": "132",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "1",
+            "target": "4239",
+            "value": 1,
+            "name": "Has"
+        },
+        {
+            "source": "5",
+            "target": "512",
+            "value": 1,
+            "name": "Introduce"
+        },
+        {
+            "source": "5",
+            "target": "2",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "5",
+            "target": "291",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "5",
+            "target": "25",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "5",
+            "target": "1",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "5",
+            "target": "3333",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "512",
+            "target": "5",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "512",
+            "target": "2",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "132",
+            "target": "2",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "132",
+            "target": "24",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "400",
+            "target": "1073",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "24",
+            "target": "132",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "24",
+            "target": "98",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "24",
+            "target": "1",
+            "value": 1,
+            "name": "Operate_In"
+        },
+        {
+            "source": "24",
+            "target": "25",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "24",
+            "target": "472",
+            "value": 1,
+            "name": "Operate_In"
+        },
+        {
+            "source": "24",
+            "target": "975",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "25",
+            "target": "91",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "111",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "132",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "316",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "483",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "24",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "25",
+            "target": "98",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "3",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "25",
+            "target": "400",
+            "value": 1,
+            "name": "Decrease"
+        },
+        {
+            "source": "25",
+            "target": "2",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "1191",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "36",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "1833",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "25",
+            "target": "1",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "36",
+            "target": "132",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "36",
+            "target": "24",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "36",
+            "target": "98",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "36",
+            "target": "472",
+            "value": 1,
+            "name": "Operate_In"
+        },
+        {
+            "source": "36",
+            "target": "1",
+            "value": 1,
+            "name": "Operate_In"
+        },
+        {
+            "source": "36",
+            "target": "25",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "1833",
+            "target": "3",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "1833",
+            "target": "2",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "171",
+            "target": "3333",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "1073",
+            "target": "25",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "316",
+            "target": "483",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "316",
+            "target": "25",
+            "value": 1,
+            "name": "Control"
+        },
+        {
+            "source": "975",
+            "target": "98",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "91",
+            "target": "132",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "91",
+            "target": "472",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "91",
+            "target": "1191",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "91",
+            "target": "483",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "98",
+            "target": "132",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "98",
+            "target": "24",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "98",
+            "target": "36",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "1004",
+            "target": "111",
+            "value": 1,
+            "name": "Impact"
+        },
+        {
+            "source": "111",
+            "target": "25",
+            "value": 1,
+            "name": "Relate_To"
+        },
+        {
+            "source": "111",
+            "target": "583",
+            "value": 1,
+            "name": "Impact"
+        }
+    ]
+}
