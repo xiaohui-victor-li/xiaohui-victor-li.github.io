@@ -96,10 +96,10 @@
 				<div class="center-main-menu">
 					<div class="menu-menu-container">
 						<ul id="primary-menu" class="pmenu">
-							<li data-target="primary" id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="#">FinDKG</a></li>
-							<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="#">Data</a></li>
-							<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#">Code</a></li>
-							<li data-target="llm" id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#">iKG LLM</a></li>
+							<li data-target="primary" id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href=".">🌐FinDKG</a></li>
+							<li data-target="data" id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="#data">Data</a></li>
+							<li data-target="model" id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#model">Model</a></li>
+							<li data-target="llm" id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#llm">iKG LLM</a></li>
 							<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="#">Introduction</a></li>
 							<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="#">FAQ</a></li>
 							</ul>
@@ -181,7 +181,41 @@
 		</div><!-- #primary -->
 
 		<!--  #Data Section           -->
+		<div id="data" class="featured-content content-area">
+			<main class="site-main">
+				<article id="post-5" class="posts-entry fbox post-5 page type-page status-publish hentry">
+					<!-- .entry-header -->
+					<header class="entry-header">
+						<h1 class="entry-title">Open-Source Financial Dynamic Knowledge Graph Dataset</h1>	
+					</header>
+				
+					<div class="entry-content">
+					
+						<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap is-layout-flex wp-container-2">
+							<div class="wp-block-column is-vertically-aligned-center is-layout-flow">
+							<p>The financial sector, despite its wealth of text data, often lags in the availability of specialized knowledge graphs (KGs). Addressing this need, we introduce the FinDKG dataset — a unique, open-source Financial Dynamic Knowledge Graph, designed to provide a temporally-resolved representation of global economic and market trends. Leveraging curated open-source financial news articles of deep history within Wayback Machine archive, FinDKG serves as an invaluable resource for researchers. The dataset is research available (non-commercial purpose only) for <a rel="noreferrer noopener" href="https://github.com/xiaohui-victor-li/FinDKG/tree/main/FinDKG_dataset" target="_blank">download</a> on GitHub.
+							</p>
+							<figure class="wp-block-image size-large">
+								<img decoding="async" width="1024" height="614" src="./charts/findkg_dataset.png" alt="" class="wp-image-140"  sizes="(max-width: 1024px) 100vw, 1024px">
+							</figure>
 
+							<h3>Bridging the Gap in Finance-Specific Knowledge Graphs</h3>
+							<p>Knowledge graphs have proliferated in various domains, but their presence is notably sparse in sector-specific areas like finance. The FinDKG dataset aims to bridge this gap by providing a rich, temporally-resolved knowledge graph specifically crafted for the financial domain.</p>
+
+							<h3>FinDKG Schema and Relationships</h3>
+							<p>FinDKG features a well-defined schema that includes 15 predefined relationships and 12 predefined entity types. From modeling the causal effects between financial markets to tracking influential persons and impactful events, FinDKG provides a comprehensive framework for understanding financial dynamics.
+							</p>
+
+							<h3>Use FinDKG Dataset for Your Research</h3>
+							<p>The FinDKG dataset is organized to facilitate easy usage, including train/validation/test splits organized chronologically. It suits perfectly for extrapolative Temporal Link Prediction task. To get your hands on this invaluable resource, simply head over to our <a rel="noreferrer noopener" href="https://github.com/xiaohui-victor-li/FinDKG/tree/main/FinDKG_dataset" target="_blank">GitHub repository</a> for the dataset download.
+
+							</p>
+						</div>
+
+					</div>
+				</article>
+			</main>
+		</div>
 
 		<!--   #llm IKG Section   -->
 		<div id="llm" class="featured-content content-area">
@@ -223,6 +257,7 @@
 			</main>
 		</div>
 		
+		<!-- #SideBar section -->
 		<aside id="secondary" class="featured-sidebar widget-area">
 
 			<section id="text-3" class="fbox swidgets-wrap widget widget_text">
@@ -230,7 +265,7 @@
 					<div class="sidebar-title-border">
 						<h3 class="widget-title">Knowledge Graph Data</h3></div></div>
 						<div class="textwidget"><p>
-							<span style="font-weight: 400;">To download data, head to the Data tab and access the materials (Google Drive links)</span>
+							<span style="font-weight: 400;">To download data, head to the <a href="#data">Data tab</a> and access the materials</span>
 						</p>
 				</div>
 			</section>
@@ -252,7 +287,7 @@
 					<div class="textwidget custom-html-widget">
 						<a href="https://xiaohui-victor-li.github.io/" target="_blank" rel="noopener noreferrer">Xiaohui Li</a>
 						<br>
-					Contact at <a href="http://www.tomzimmermann.net/" target="_blank" rel="noopener noreferrer">xiaohui.li21@imperial.ac.uk</a></div>
+					Contact at <a href="https://xiaohui-victor-li.github.io/" target="_blank" rel="noopener noreferrer">xiaohui.li21@imperial.ac.uk</a></div>
 				</section>
 
 			<section id="text-8" class="fbox swidgets-wrap widget widget_text">
@@ -264,8 +299,8 @@
 					<ul>
 					<li>Thesis paper to deep dive into the project</li>
 					<li>FinDKG research data and model code for benchmarking</li>
-					<li>iKG fine-tuned LLM for generative knowledge graph construction</li>
-					<li>Head to the <span style="text-decoration: underline;"><a href="./data">data page</a></span> and <u><a href="https://github.com/" target="_blank" rel="noopener">github repo</a> </u>for details</li>
+					<li><span style="text-decoration: underline;"><a href="#llm">iKG</a></span> fine-tuned LLM for generative knowledge graph construction</li>
+					<li>Head to the <span style="text-decoration: underline;"><a href="#data">Data tab</a></span> and <u><a href="https://github.com/xiaohui-victor-li/FinDKG/tree/main" target="_blank" rel="noopener">github repo</a> </u>for details</li>
 					</ul>
 					<p>&nbsp;
 					</p>
@@ -563,36 +598,52 @@
 
 	<!-- JS to switch content block -->
 	<script>
+		function showSectionById(id) {
+			// Hide all content sections
+			document.querySelectorAll('.content-area').forEach(section => {
+			section.style.display = 'none';
+			});
+			
+			// Show the target content section
+			const targetSection = document.getElementById(id);
+			if (targetSection) {
+			targetSection.style.display = 'block';
+
+			// If the primary section is shown, initialize the D3 chart
+			if (id === 'primary') {
+				initializeD3Chart();
+			}
+			}
+		}
+
+		// Core tab switch function
 		document.addEventListener("DOMContentLoaded", function() {
 
-		// Initially show the primary content area and initialize the D3 chart
-		const primarySection = document.getElementById('primary');
-		primarySection.style.display = 'block';
-		initializeD3Chart();  // Initialize D3 chart at the start
+		// Initial loading logic based on hash or default
+		const initialHash = window.location.hash.substr(1); // Remove the '#' at the beginning
+			if (initialHash) {
+				showSectionById(initialHash);
+			} else {
+				document.getElementById('primary').style.display = 'block';
+				initializeD3Chart(); // Initialize D3 chart for primary
+			}
 
+		// Hash change event listener to navigate between sections
+		window.addEventListener('hashchange', function() {
+				const currentHash = window.location.hash.substr(1);
+				showSectionById(currentHash);
+		});
 
 		const menuItems = document.querySelectorAll('#primary-menu li');
 		menuItems.forEach(item => {
 			item.addEventListener('click', function() {
-			// Hide all content sections
-			document.querySelectorAll('.content-area').forEach(section => {
-				section.style.display = 'none';
-			});
-			
-			// Show the target content section
 			const targetId = this.getAttribute('data-target');
-			const targetSection = document.getElementById(targetId);
-			if (targetSection) {
-				targetSection.style.display = 'block';
-
-				// If the primary section is shown, initialize the D3 chart
-				if (targetId === 'primary') {
-            	initializeD3Chart();
-          		}
-			}
+			window.location.hash = targetId;
+			showSectionById(targetId);
 			});
 		});
-		});
+
+	});
 	</script>
 	
 
