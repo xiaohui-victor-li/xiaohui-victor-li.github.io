@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <!-- Victor Xiaohui Li -->
 <html lang="en-US">
-	<head>
+
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<title>Financial Dynamic Knowledge Graph</title>
@@ -60,493 +60,580 @@
 		
 		.sheader { background:  }
 		</style>
-	</head>
+
+	<!-- Section Toggle -->
+	<style>
+		.content-area {
+		display: none;
+		}
+		#main {
+		display: block;
+		}
+	</style>
+</head>
 
 <body class="home page-template-default page page-id-5 masthead-fixed" data-new-gr-c-s-check-loaded="14.1119.0" data-gr-ext-installed="">
-	 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+	 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs>
+	 <filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0.49803921568627"></fefuncr><fefuncg type="table" tableValues="0 0.49803921568627"></fefuncg><fefuncb type="table" tableValues="0 0.49803921568627"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+	 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 1"></fefuncr><fefuncg type="table" tableValues="0 0.27843137254902"></fefuncg><fefuncb type="table" tableValues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0 0"></fefuncr><fefuncg type="table" tableValues="0 0.64705882352941"></fefuncg><fefuncb type="table" tableValues="0 1"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.78039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.94901960784314"></fefuncg><fefuncb type="table" tableValues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tableValues="0 1"></fefuncg><fefuncb type="table" tableValues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tableValues="0.098039215686275 1"></fefuncr><fefuncg type="table" tableValues="0 0.66274509803922"></fefuncg><fefuncb type="table" tableValues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tableValues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
 	 <a class="skip-link screen-reader-text" href="https://xiaohui-victor-li.github.io/FinDKG/#content">Skip to content</a>
+
 	<div id="page" class="site">
 
-		<header id="masthead" class="sheader site-header clearfix">
-			<div class="content-wrap">
-							<div class="site-branding">
+	<!-- #Header Section -->
+	<header id="masthead" class="sheader site-header clearfix">
+		<div class="content-wrap">
+			<div class="site-branding">
 				<!-- If frontpage, make title h1 -->
 							<p class="site-title">
-								<a href="https://xiaohui-victor-li.github.io/FinDKG/" rel="home">Financial Dynamic Knowledge Graph (Under Construction)</a></p>
+								<a href="https://xiaohui-victor-li.github.io/FinDKG/" rel="home">Financial Dynamic Knowledge Graph</a></p>
 					</div>
 			</div>
 
-	<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
-		<a href="https://xiaohui-victor-li.github.io/FinDKG/#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
-		<div class="content-wrap text-center">
-			<div class="center-main-menu">
-				<div class="menu-menu-container">
-					<ul id="primary-menu" class="pmenu">
-						<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="./#">FinDKG</a></li>
-						<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="/data/">Data</a></li>
-						<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="/code/">Code</a></li>
-						<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="/code/">iKG LLM</a></li>
-						<li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="/featured-in/">Introduction</a></li>
-						<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="/faq/">FAQ</a></li>
-						</ul>
-				</div>				
-			</div>
-			</div>
-	</nav>
-	<div class="super-menu clearfix">
+		<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
+			<a href="https://xiaohui-victor-li.github.io/FinDKG/#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+			<div class="content-wrap text-center">
+				<div class="center-main-menu">
+					<div class="menu-menu-container">
+						<ul id="primary-menu" class="pmenu">
+							<li data-target="primary" id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="#">FinDKG</a></li>
+							<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="#">Data</a></li>
+							<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#">Code</a></li>
+							<li data-target="llm" id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#">iKG LLM</a></li>
+							<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="#">Introduction</a></li>
+							<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="#">FAQ</a></li>
+							</ul>
+					</div>				
+				</div>
+				</div>
+		</nav>
+
+
+		<div class="super-menu clearfix">
 			<div class="super-menu-inner">
 				<a href="./#" id="pull" class="toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
 			</div>
 		</div>
 		<div id="mobile-menu-overlay">
-
 		</div>
-	</header>
-
+	</header><!-- #Header -->
 	
-<div class="content-wrap">
-	<div class="header-widgets-wrapper">
-		
-	
-</div>
-</div>
-
-<div id="content" class="site-content clearfix">
 	<div class="content-wrap">
-
-	<div id="primary" class="featured-content content-area">
-		<main id="main" class="site-main">
-
-			
-<article id="post-5" class="posts-entry fbox post-5 page type-page status-publish hentry">
-	<!-- .entry-header -->
-	<header class="entry-header">
-		<h1 class="entry-title">FinDKG: Financial Dynamic Knowledge Graph</h1>	
-	</header>
-
-	<div class="entry-content">
-		
-		<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap is-layout-flex wp-container-2">
-			<div class="wp-block-column is-vertically-aligned-center is-layout-flow">
-			<p>This website provides the Financial Dynamic Knowledge Graph (FinDKG) portal, driven by graph AI model KGTransformer, from the streams of global financial news. Should you use the data or model, kindly cite the <a rel="noreferrer noopener" href="https://papers.ssrn.com" target="_blank">paper</a>.</p>
-			
-			<h3>FinDKG Snapshot as of Week @Jan 1, 2023</h3>
-
-			<p>The interactive graph below presents the FinDKG's key entities with their actively linked entities - the most influential variables driving the latest global macro-financial universe (drag the interested entity to see impact):</p>
-
-			<!-- Placeholder for the D3 chart -->
-			<div id="d3-chart-container">
-				<style>
-					/* Styles for nodes and links */
-					circle {
-					  stroke: #fff;
-					  stroke-width: 1.5px;
-					}
-				
-					line {
-					  stroke: #999;
-					  stroke-opacity: 0.6;
-					}
-				  </style>
-			</div>
-	</div>
-</div>
-
-<p>The follwing table provides a detailed profile of these "Top KG Entities", alongside financial variables expected to be most influenced by them in the coming week, as predicted by our graph-based AI model:</p>
-
-<iframe src="data/FinDKG_reactable.html" width="100%" height="550px"></iframe>
-		
-<p>The "Predicted Most Impacted Financial Entities" column pinpoints financial variables predicted to be mostly impacted in the forthcoming week. The table also shows a ranked percentile to indicate the relative importance of each entity among the whole 10,000+ entity universe, with a "Novelty" score indicating its recent emergence in the dataset. By examining the "Recent 3-month Trend", one can gauge the trajectory of an entity's influence over time.</p>
-
-
-
-<!-- 
-<figure class="wp-block-image size-large">
-	<img decoding="async" width="1024" height="614" src="./files/fig_tstathand_vs_tstatOP-1024x614.png" alt="" class="wp-image-140" srcset="https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-1024x614.png 1024w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-300x180.png 300w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-768x461.png 768w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-1536x922.png 1536w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-2048x1229.png 2048w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-850x510.png 850w" sizes="(max-width: 1024px) 100vw, 1024px">
-</figure>
- -->
-
-<p></p>
-
-			</div><!-- .entry-content -->
-</article><!-- #post-5 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-
-<aside id="secondary" class="featured-sidebar widget-area">
-
-	<section id="text-3" class="fbox swidgets-wrap widget widget_text">
-		<div class="swidget">
-			<div class="sidebar-title-border">
-				<h3 class="widget-title">Knowledge Graph Data</h3></div></div>
-				<div class="textwidget"><p>
-					<span style="font-weight: 400;">To download data, head to the Data tab and access the materials (Google Drive links)</span>
-				</p>
+		<div class="header-widgets-wrapper">	
 		</div>
-	</section>
-
-	<section id="text-3" class="fbox swidgets-wrap widget widget_text">
-		<div class="swidget">
-			<div class="sidebar-title-border">
-				<h3 class="widget-title">Model</h3></div></div>
-				<div class="textwidget"><p>
-					<span style="font-weight: 400;">Enter the Introduction tab to learn more about the dynamic knowledge graph transformer model.</span>
-				</p>
-		</div>
-	</section>
-
-		
-	<section id="custom_html-5" class="widget_text fbox swidgets-wrap widget widget_custom_html">
-		<div class="swidget"><div class="sidebar-title-border">
-			<h3 class="widget-title">Author</h3></div></div>
-			<div class="textwidget custom-html-widget">
-				<a href="https://xiaohui-victor-li.github.io/" target="_blank" rel="noopener noreferrer">Xiaohui Li</a>
-				<br>
-			Contact at <a href="http://www.tomzimmermann.net/" target="_blank" rel="noopener noreferrer">xiaohui.li21@imperial.ac.uk</a></div>
-		</section>
-
-<section id="text-8" class="fbox swidgets-wrap widget widget_text">
-	<div class="swidget"><div class="sidebar-title-border">
-		<h3 class="widget-title">News</h3>
-		</div></div>
-		<div class="textwidget">
-			<p>2023-08-31: <strong>Debut of FinDKG v1.0</strong> including</p>
-			<ul>
-			<li>Thesis paper to deep dive into the project</li>
-			<li>FinDKG research data and model code for benchmarking</li>
-			<li>iKG fine-tuned LLM for generative knowledge graph construction</li>
-			<li>Head to the <span style="text-decoration: underline;"><a href="./data">data page</a></span> and <u><a href="https://github.com/" target="_blank" rel="noopener">github repo</a> </u>for details</li>
-			</ul>
-			<p>&nbsp;
-			</p>
-			</ul>
-		</div>
-	</section>
-</aside><!-- #secondary -->
-</div>
-</div><!-- #content -->
-
-<footer id="colophon" class="site-footer clearfix">
-
-	<div class="content-wrap">
-				<div class="footer-column-wrapper">
-			<div class="footer-column-three footer-column-left">
-				<section id="custom_html-6" class="widget_text fbox widget widget_custom_html"><div class="textwidget custom-html-widget">The views expressed herein are those of the author for information and academic purposes only and do not reflect any constitute an offer or a recommendation to purchase or sell any security or service. It is not intended for distribution, publication, or use in any jurisdiction where such distribution, publication, or use would be unlawful. This material does not contain personalized recommendations or advice and is not intended to substitute any professional advice on investment in financial products.</div>
-				</section>
-			</div>
-		
-				<div class="footer-column-three footer-column-middle">
-			<section id="text-7" class="fbox widget widget_text">			<div class="textwidget"></div>
-		</section>		</div>
-	
-		<div class="footer-column-three footer-column-right">
-		<section id="custom_html-10" class="widget_text fbox widget widget_custom_html">
-			<div class="textwidget custom-html-widget">This project is the author's graduate thesis research at Imperial College London and has received great support and guidance from his supervisor <a href="https://www.imperial.ac.uk/people/f.sannapassino" rel="nofollow">Dr Francesco Sanna Passino</a>.
-			</div>
-		</section>				
 	</div>
 
-</div>
+	<!-- #Content Section -->
+	<div id="content" class="site-content clearfix">
+		<div class="content-wrap">
 
-<div class="site-info">
-	© 2023 Financial Dynamic Knowledge Graph	<!-- Delete below lines to remove copyright from footer -->
-	<span class="footer-info-right">
-		 | Powered by <a href="https://superbthemes.com/minimalistblogger/" rel="nofollow">Minimalist Blog</a> WordPress Theme	</span>
-	<!-- Delete above lines to remove copyright from footer -->
+		<div id="primary" class="featured-content content-area">
+			<main id="main" class="site-main">
 
-</div><!-- .site-info -->
-</div>
+			<article id="post-5" class="posts-entry fbox post-5 page type-page status-publish hentry">
+				<!-- .entry-header -->
+				<header class="entry-header">
+					<h1 class="entry-title">FinDKG: Financial Dynamic Knowledge Graph</h1>	
+				</header>
 
-
-
-</footer>
-</div>
-
-
-<!-- D3 Dynamic Graph Charting -->
-<script>
-	// Define the size of the SVG canvas
-	var width = document.querySelector("#d3-chart-container").clientWidth;
-	var height = document.querySelector("#d3-chart-container").clientHeight;
-	var radius = height/10; // Assuming nodes have a radius of 20. Adjust if different.
-
-	const svg = d3.select("#d3-chart-container").append("svg")
-		.attr("width", width)
-		.attr("height", height)
-		.attr("viewBox", `0 0 ${width} ${height}`)
-		.attr("preserveAspectRatio", "xMidYMid meet");;
-	
-	let simulation = d3.forceSimulation()
-	.force("link", d3.forceLink().id(d => d.id))
-	.force("charge", d3.forceManyBody());
-
-	d3.json("data/FinKG_data_live.json").then(graph => {
-		// Define arrow markers for directed edges
-		svg.append('defs').selectAll('marker')
-			.data(['end'])
-			.enter().append('marker')
-			.attr('id', d => d)
-			.attr('viewBox', '0 -5 10 10')
-			.attr('refX', 10)  // slight adjustment
-			.attr('refY', 0)
-			.attr('markerWidth', 6)
-			.attr('markerHeight', 6)
-			.attr('orient', 'auto')
-			.append('path')
-			.attr('d', 'M0,-5L10,0L0,5')
-			.attr('fill', 'black'); // Default fill
-
-		let link = svg.append("g")
-			.attr("class", "links")
-			.selectAll("line")
-			.data(graph.links)
-			.enter().append("line")
-			.attr("stroke", "black")  // Default color
-			.style('stroke', "black")
-			.attr("stroke-width", 1) // d => Math.sqrt(d.value)
-			.attr("marker-end", "url(#end)");
-
-		// Add link names
-		let linkText = svg.append("g")
-				.attr("class", "link-labels")
-				.selectAll("text")
-				.data(graph.links)
-				.enter().append("text")
-				.attr("dy",  "-0.5em")
-				.attr("text-anchor", "middle")
-				.style("font-size", "8.5px")
-				.html(d => {
-					// Split link names over two lines if too long
-					if (d.name.length > 15) {
-						return `${d.name.substring(0, 7)}<tspan x='0' dy='1.2em'>${d.name.substring(7)}</tspan>`;
-					} else {
-						return d.name;
-					}
-				});
-
-		let node = svg.append("g")
-			.attr("class", "nodes")
-			.selectAll("circle")
-			.data(graph.nodes)
-			.enter().append("circle")
-			.attr("r", d => Math.sqrt(d.value) * 8)  // Adjust radius based on value
-			.attr("fill", d => {
-				switch (d.group) {
-					case 1: return "#E87D64";   // GPE
-					case 2: return "#517EF5";   // COMP
-					case 3: return "#0091D4";
-					case 4: return "#E8BC4D";   // FIN_INSTRUMENT	
-					case 9: return "#59CBE8";
-					case 8: return "#003E74";
-					case 7: return "#4EB5CF";   // ORG
-					default: return "gray";
-				}
-			})
-			.call(d3.drag()
-				.on("start", dragstarted)
-				.on("drag", dragged)
-				.on("end", dragended));
-
-		// Add node labels
-		let labels = svg.append("g")
-			.attr("class", "labels")
-			.selectAll("text")
-			.data(graph.nodes)
-			.enter().append("text")
-			.attr("font-weight", "bold")  // Making text bold
-			.attr("fill", "white")  // Making text color white
-			.attr("text-anchor", "middle")
-			.style("font-size", "9px")
-			.each(function(d) {
-				let nodeText = d3.select(this);
-				if (d.name.length > 10) {
-					let breakAt = d.name.indexOf(' ', 7);  // Find the space after the 7th character
-
-					if (breakAt !== -1 && breakAt < d.name.length - 1) { 
-						// Split the name at the space
-						let firstPart = d.name.substring(0, breakAt);
-						let secondPart = d.name.substring(breakAt + 1);
+				<div class="entry-content">
+					
+					<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap is-layout-flex wp-container-2">
+						<div class="wp-block-column is-vertically-aligned-center is-layout-flow">
+						<p>This website provides the Financial Dynamic Knowledge Graph (FinDKG) portal, driven by graph AI model KGTransformer, from the streams of global financial news. Should you use the data or model, kindly cite the <a rel="noreferrer noopener" href="https://papers.ssrn.com" target="_blank">paper</a>.</p>
 						
-						nodeText.append("tspan")
-							.attr("dx", "0em")
-							.attr("dy", "-0.5em")
-							.text(firstPart);
+						<h3>FinDKG Snapshot as of Week @Jan 1, 2023</h3>
 
-						nodeText.append("tspan")
-							.attr("dx", "-3.5em")
-							.attr("dy", "1em")
-							.text(secondPart);
-					} else { 
-						// Just append the name as it is if we can't find a space
-						nodeText.append("tspan")
-							.attr("dy", "0.35em")
-							.text(d.name);
-					}
-				} else {
-					// If the name is short
-					nodeText.append("tspan")
-						.attr("dy", "0.35em")
-						.text(d.name);
-				}
+						<p>The interactive graph below presents the FinDKG's key entities with their actively linked entities - the most influential variables driving the latest global macro-financial universe (drag the interested entity to see impact):</p>
+
+						<!-- Placeholder for the D3 chart -->
+						<div id="d3-chart-container">
+							<style>
+								/* Styles for nodes and links */
+								circle {
+								stroke: #fff;
+								stroke-width: 1.5px;
+								}
+							
+								line {
+								stroke: #999;
+								stroke-opacity: 0.6;
+								}
+							</style>
+						</div>
+					</div>
+					</div>
+
+					<p>The follwing table provides a detailed profile of these "Top KG Entities", alongside financial variables expected to be most influenced by them in the coming week, as predicted by our graph-based AI model:</p>
+
+					<iframe src="data/FinDKG_reactable.html" width="100%" height="550px"></iframe>
+							
+					<p>The "Predicted Most Impacted Financial Entities" column pinpoints financial variables predicted to be mostly impacted in the forthcoming week. The table also shows a ranked percentile to indicate the relative importance of each entity among the whole 10,000+ entity universe, with a "Novelty" score indicating its recent emergence in the dataset. By examining the "Recent 3-month Trend", one can gauge the trajectory of an entity's influence over time.</p>
+
+					<!-- 
+					<figure class="wp-block-image size-large">
+						<img decoding="async" width="1024" height="614" src="./files/fig_tstathand_vs_tstatOP-1024x614.png" alt="" class="wp-image-140" srcset="https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-1024x614.png 1024w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-300x180.png 300w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-768x461.png 768w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-1536x922.png 1536w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-2048x1229.png 2048w, https://xiaohui-victor-li.github.io/FinDKG/wp-content/uploads/2022/03/fig_tstathand_vs_tstatOP-850x510.png 850w" sizes="(max-width: 1024px) 100vw, 1024px">
+					</figure>
+					-->
+				</div><!-- .entry-content -->
+			</article><!-- #post-5 -->
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+		<!--  #Data Section           -->
+
+
+		<!--   #llm IKG Section   -->
+		<div id="llm" class="featured-content content-area">
+			<main class="site-main">
+				<article id="post-5" class="posts-entry fbox post-5 page type-page status-publish hentry">
+					<!-- .entry-header -->
+					<header class="entry-header">
+						<h1 class="entry-title">iKG: Imperial Knowledge Graph Generator Large Langue Model</h1>	
+					</header>
+				
+					<div class="entry-content">
+					
+						<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap is-layout-flex wp-container-2">
+							<div class="wp-block-column is-vertically-aligned-center is-layout-flow">
+							<p>Imperial Knowledge Graph Generator, termed <a rel="noreferrer noopener" href="https://huggingface.co/victorlxh/iKG-v1.0" target="_blank">iKG</a>, is an innovative, instruction-following Large Language Model (LLM) that is fine-tuned for the purpose of generative knowledge graph construction. Drawing from the advanced capabilities of LLM and built on top of the <a rel="noreferrer noopener" href="https://lmsys.org/blog/2023-03-30-vicuna/" target="_blank">Vicuna-7B</a> from Meta's <a rel="noreferrer noopener" href="https://ai.meta.com/llama/" target="_blank">LLaMA</a> models, iKG offers unparalleled proficiency in converting vast amounts of unstructured textual data into structured knowledge graphs. With proven efficiency for deployment on consumer-level GPUs, iKG not only matches the performance of leading models but also does so at a fraction of the computational cost. This makes iKG an essential tool for researchers and professionals aiming to unlock actionable insights from knowledge graph data across various domains.</p>
+							
+							<figure class="wp-block-image size-large">
+								<img decoding="async" width="1024" height="614" src="./charts/iKG_framework.png" alt="" class="wp-image-140"  sizes="(max-width: 1024px) 100vw, 1024px">
+							</figure>
+
+							<p>To train iKG, we began with Vicuna-7B as our foundational architecture. Building on this, we fine-tuned iKG using self-instruct methodology involving GPT-4's API to generate high-quality instruction-response pairs. The process involved 3K demonstrations that were specifically engineered to guide the model in knowledge graph construction. This fine-tuning allows iKG to excel at extracting entities and relationships from unstructured text data, transforming it into structured knowledge graphs efficiently and accurately. 
+							</p>
+
+							<h3>The Challenge of Knowledge Graph Construction: Converting Text into Structured Data</h3>
+	
+							<p>In an age where text data is growing exponentially, the biggest challenge isn't just collecting it, but structuring and making sense of it. Knowledge graphs, which can represent complex relationships between entities, have become a cornerstone in tackling this challenge. They've found applications in a wide array of sectors, from search engines to healthcare and finance. However, constructing these graphs manually is time-consuming, and automating this process requires sophisticated technology.</p>
+							
+							<h3>Leveraging LLMs with Prompt Engineering</h3>
+							<p>The beauty of iKG lies in its reliance on Large Language Models (LLMs) and a technique called "prompt engineering." LLMs like GPT-4 have the capability to understand and generate human-like text, thanks to their training on extensive text data. iKG is fine-tuned from Vicuna-7B, which itself is based on Meta's LLaMA model, and utilizes the GPT-4 API for data generation.
+							</p>
+
+							<p>Prompt engineering is where the magic happens. It involves manipulating the input query or "prompt" to guide the model's response effectively. With this method, iKG can precisely extract intricate relationships and entities from text, making it incredibly effective for knowledge graph construction.
+							</p>
+
+						</div>
+
+					</div>
+				</article>
+			</main>
+		</div>
+		
+		<aside id="secondary" class="featured-sidebar widget-area">
+
+			<section id="text-3" class="fbox swidgets-wrap widget widget_text">
+				<div class="swidget">
+					<div class="sidebar-title-border">
+						<h3 class="widget-title">Knowledge Graph Data</h3></div></div>
+						<div class="textwidget"><p>
+							<span style="font-weight: 400;">To download data, head to the Data tab and access the materials (Google Drive links)</span>
+						</p>
+				</div>
+			</section>
+
+			<section id="text-3" class="fbox swidgets-wrap widget widget_text">
+				<div class="swidget">
+					<div class="sidebar-title-border">
+						<h3 class="widget-title">Model</h3></div></div>
+						<div class="textwidget"><p>
+							<span style="font-weight: 400;">Enter the Introduction tab to learn more about the dynamic knowledge graph transformer model.</span>
+						</p>
+				</div>
+			</section>
+
+				
+			<section id="custom_html-5" class="widget_text fbox swidgets-wrap widget widget_custom_html">
+				<div class="swidget"><div class="sidebar-title-border">
+					<h3 class="widget-title">Author</h3></div></div>
+					<div class="textwidget custom-html-widget">
+						<a href="https://xiaohui-victor-li.github.io/" target="_blank" rel="noopener noreferrer">Xiaohui Li</a>
+						<br>
+					Contact at <a href="http://www.tomzimmermann.net/" target="_blank" rel="noopener noreferrer">xiaohui.li21@imperial.ac.uk</a></div>
+				</section>
+
+			<section id="text-8" class="fbox swidgets-wrap widget widget_text">
+			<div class="swidget"><div class="sidebar-title-border">
+				<h3 class="widget-title">News</h3>
+				</div></div>
+				<div class="textwidget">
+					<p>2023-08-31: <strong>Debut of FinDKG v1.0</strong> including</p>
+					<ul>
+					<li>Thesis paper to deep dive into the project</li>
+					<li>FinDKG research data and model code for benchmarking</li>
+					<li>iKG fine-tuned LLM for generative knowledge graph construction</li>
+					<li>Head to the <span style="text-decoration: underline;"><a href="./data">data page</a></span> and <u><a href="https://github.com/" target="_blank" rel="noopener">github repo</a> </u>for details</li>
+					</ul>
+					<p>&nbsp;
+					</p>
+					</ul>
+				</div>
+			</section>
+		</aside><!-- #secondary -->
+		</div>
+	</div><!-- #content -->
+
+	<!-- #Footer Section -->
+	<footer id="colophon" class="site-footer clearfix">
+
+		<div class="content-wrap">
+			<div class="footer-column-wrapper">
+				<div class="footer-column-three footer-column-left">
+					<section id="custom_html-6" class="widget_text fbox widget widget_custom_html">
+						<div class="textwidget custom-html-widget">The views expressed herein are those of the author for information and academic purposes only and do not reflect any constitute an offer or a recommendation to purchase or sell any security or service. It is not intended for distribution, publication, or use in any jurisdiction where such distribution, publication, or use would be unlawful. This material does not contain personalized recommendations or advice and is not intended to substitute any professional advice on investment in financial products.</div>
+					</section>
+					</div>
+			
+					<div class="footer-column-three footer-column-middle">
+					<section id="text-7" class="fbox widget widget_text">			<div class="textwidget"></div>
+					</section>		
+				</div>
+		
+				<div class="footer-column-three footer-column-right">
+					<section id="custom_html-10" class="widget_text fbox widget widget_custom_html">
+						<div class="textwidget custom-html-widget">This project is the author's graduate thesis research at Imperial College London and has received great support and guidance from his supervisor <a href="https://www.imperial.ac.uk/people/f.sannapassino" rel="nofollow">Dr Francesco Sanna Passino</a>.
+						</div>
+					</section>				
+				</div>
+			</div>
+
+			<div class="site-info">
+				© 2023 Financial Dynamic Knowledge Graph	<!-- Delete below lines to remove copyright from footer -->
+				<span class="footer-info-right">
+					| Powered by <a href="https://superbthemes.com/minimalistblogger/" rel="nofollow">Minimalist Blog</a> WordPress Theme	</span>
+				<!-- Delete above lines to remove copyright from footer -->
+			</div><!-- .site-info -->
+		</div>
+	</footer>
+	</div>
+
+	<!-- D3 Dynamic Graph Charting -->
+	<script>
+		// Initialize D3 chart
+		function initializeD3Chart() {
+			// Clear previous SVG if it exists
+			d3.select("#d3-chart-container").select("svg").remove();
+
+			var width = document.querySelector("#d3-chart-container").clientWidth;
+			var height = document.querySelector("#d3-chart-container").clientHeight;
+			var radius = height/10; // Assuming nodes have a radius of 20. Adjust if different.
+
+			const svg = d3.select("#d3-chart-container").append("svg")
+			.attr("width", width)
+			.attr("height", height)
+			.attr("viewBox", `0 0 ${width} ${height}`)
+			.attr("preserveAspectRatio", "xMidYMid meet");;
+		
+			let simulation = d3.forceSimulation()
+			.force("link", d3.forceLink().id(d => d.id))
+			.force("charge", d3.forceManyBody());
+
+			d3.json("data/FinKG_data_live.json").then(graph => {
+				// Define arrow markers for directed edges
+				svg.append('defs').selectAll('marker')
+					.data(['end'])
+					.enter().append('marker')
+					.attr('id', d => d)
+					.attr('viewBox', '0 -5 10 10')
+					.attr('refX', 10)  // slight adjustment
+					.attr('refY', 0)
+					.attr('markerWidth', 6)
+					.attr('markerHeight', 6)
+					.attr('orient', 'auto')
+					.append('path')
+					.attr('d', 'M0,-5L10,0L0,5')
+					.attr('fill', 'black'); // Default fill
+
+				let link = svg.append("g")
+					.attr("class", "links")
+					.selectAll("line")
+					.data(graph.links)
+					.enter().append("line")
+					.attr("stroke", "black")  // Default color
+					.style('stroke', "black")
+					.attr("stroke-width", 1) // d => Math.sqrt(d.value)
+					.attr("marker-end", "url(#end)");
+
+				// Add link names
+				let linkText = svg.append("g")
+						.attr("class", "link-labels")
+						.selectAll("text")
+						.data(graph.links)
+						.enter().append("text")
+						.attr("dy",  "-0.5em")
+						.attr("text-anchor", "middle")
+						.style("font-size", "8.5px")
+						.html(d => {
+							// Split link names over two lines if too long
+							if (d.name.length > 15) {
+								return `${d.name.substring(0, 7)}<tspan x='0' dy='1.2em'>${d.name.substring(7)}</tspan>`;
+							} else {
+								return d.name;
+							}
+						});
+
+				let node = svg.append("g")
+					.attr("class", "nodes")
+					.selectAll("circle")
+					.data(graph.nodes)
+					.enter().append("circle")
+					.attr("r", d => Math.sqrt(d.value) * 8)  // Adjust radius based on value
+					.attr("fill", d => {
+						switch (d.group) {
+							case 1: return "#E87D64";   // GPE
+							case 2: return "#517EF5";   // COMP
+							case 3: return "#0091D4";
+							case 4: return "#E8BC4D";   // FIN_INSTRUMENT	
+							case 9: return "#59CBE8";
+							case 8: return "#003E74";
+							case 7: return "#4EB5CF";   // ORG
+							default: return "gray";
+						}
+					})
+					.call(d3.drag()
+						.on("start", dragstarted)
+						.on("drag", dragged)
+						.on("end", dragended));
+
+				// Add node labels
+				let labels = svg.append("g")
+					.attr("class", "labels")
+					.selectAll("text")
+					.data(graph.nodes)
+					.enter().append("text")
+					.attr("font-weight", "bold")  // Making text bold
+					.attr("fill", "white")  // Making text color white
+					.attr("text-anchor", "middle")
+					.style("font-size", "9px")
+					.each(function(d) {
+						let nodeText = d3.select(this);
+						if (d.name.length > 10) {
+							let breakAt = d.name.indexOf(' ', 7);  // Find the space after the 7th character
+
+							if (breakAt !== -1 && breakAt < d.name.length - 1) { 
+								// Split the name at the space
+								let firstPart = d.name.substring(0, breakAt);
+								let secondPart = d.name.substring(breakAt + 1);
+								
+								nodeText.append("tspan")
+									.attr("dx", "0em")
+									.attr("dy", "-0.5em")
+									.text(firstPart);
+
+								nodeText.append("tspan")
+									.attr("dx", "-3.5em")
+									.attr("dy", "1em")
+									.text(secondPart);
+							} else { 
+								// Just append the name as it is if we can't find a space
+								nodeText.append("tspan")
+									.attr("dy", "0.35em")
+									.text(d.name);
+							}
+						} else {
+							// If the name is short
+							nodeText.append("tspan")
+								.attr("dy", "0.35em")
+								.text(d.name);
+						}
+					});
+
+				function ticked() {
+					link
+						.attr("x1", d => d.source.x)
+						.attr("y1", d => d.source.y)
+						.attr("x2", function(d) {
+							let deltaX = d.target.x - d.source.x,
+								deltaY = d.target.y - d.source.y,
+								dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY),
+								normX = deltaX / dist,
+								targetX = d.target.x - (Math.sqrt(d.target.value) * 8 * normX);  // 20 is node's radius
+
+							return targetX;
+						})
+						.attr("y2", function(d) {
+							let deltaX = d.target.x - d.source.x,
+								deltaY = d.target.y - d.source.y,
+								dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY),
+								normY = deltaY / dist,
+								targetY = d.target.y - (Math.sqrt(d.target.value) * 8  * normY);  // 20 is node's radius
+
+							return targetY;
+						});
+					// Adjusting node positions
+					node
+						.attr("cx", function(d) { 
+							d.x = Math.max(radius, Math.min(width - radius, d.x));
+							return d.x;
+						})
+						.attr("cy", function(d) { 
+							d.y = Math.max(radius, Math.min(height - radius, d.y));
+							return d.y;
+						});
+
+					labels
+						.attr("x", d => d.x)
+						.attr("y", d => d.y);
+
+					linkText
+						.attr("x", d => (d.source.x + d.target.x) / 2)
+						.attr("y", d => {
+							let midY = (d.source.y + d.target.y) / 2;
+
+							if (hasParallelEdge(d.source, d.target, graph.links)) {
+								let diff = d.target.y - d.source.y;
+								if (diff < 0) {
+									return midY - 15;
+								} else {
+									return midY + 15;
+								}
+							}
+							return midY;
+						})
+						.attr("transform", function(d) {
+							let angle = Math.atan2(d.target.y - d.source.y, d.target.x - d.source.x) * 180 / Math.PI;
+							let midX = (d.source.x + d.target.x) / 2;
+							let midY = (d.source.y + d.target.y) / 2;
+
+							if (angle < 0) {
+								angle = angle + 360;  // converting to positive angles
+							}
+
+							// The goal is to always have the text rotated in a way it's readable and above the link
+							// If the link is more horizontal (angle between 90 to 270), flip the text
+							if (angle > 90 && angle < 270) {
+								return `rotate(${angle + 180}, ${midX}, ${midY})`;
+							} else {
+								return `rotate(${angle}, ${midX}, ${midY})`;
+							}
+							return `rotate(${angle}, ${midX}, ${midY})`;
+						});
+			}
+
+				node.append("title").text(d => d.id);
+				simulation
+					.force("link", d3.forceLink().id(d => d.id).distance(height/2))  // Adjusted distance for better spread
+					.force("charge", d3.forceManyBody().strength(-800))  // Adjusted strength for better spread
+					.force("center", d3.forceCenter( width/2, height/2));   // width and height
+
+				simulation.nodes(graph.nodes).on("tick", ticked);
+				simulation.force("link").links(graph.links);
 			});
 
-		function ticked() {
-			link
-				.attr("x1", d => d.source.x)
-				.attr("y1", d => d.source.y)
-				.attr("x2", function(d) {
-					let deltaX = d.target.x - d.source.x,
-						deltaY = d.target.y - d.source.y,
-						dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY),
-						normX = deltaX / dist,
-						targetX = d.target.x - (Math.sqrt(d.target.value) * 8 * normX);  // 20 is node's radius
 
-					return targetX;
-				})
-				.attr("y2", function(d) {
-					let deltaX = d.target.x - d.source.x,
-						deltaY = d.target.y - d.source.y,
-						dist = Math.sqrt(deltaX * deltaX + deltaY * deltaY),
-						normY = deltaY / dist,
-						targetY = d.target.y - (Math.sqrt(d.target.value) * 8  * normY);  // 20 is node's radius
-
-					return targetY;
-				});
-			// Adjusting node positions
-			node
-				.attr("cx", function(d) { 
-					d.x = Math.max(radius, Math.min(width - radius, d.x));
-					return d.x;
-				})
-				.attr("cy", function(d) { 
-					d.y = Math.max(radius, Math.min(height - radius, d.y));
-					return d.y;
-				});
-
-			labels
-				.attr("x", d => d.x)
-				.attr("y", d => d.y);
-
-			linkText
-				.attr("x", d => (d.source.x + d.target.x) / 2)
-				.attr("y", d => {
-					let midY = (d.source.y + d.target.y) / 2;
-
-					if (hasParallelEdge(d.source, d.target, graph.links)) {
-						let diff = d.target.y - d.source.y;
-						if (diff < 0) {
-							return midY - 15;
-						} else {
-							return midY + 15;
-						}
-					}
-					return midY;
-				})
-				.attr("transform", function(d) {
-					let angle = Math.atan2(d.target.y - d.source.y, d.target.x - d.source.x) * 180 / Math.PI;
-					let midX = (d.source.x + d.target.x) / 2;
-					let midY = (d.source.y + d.target.y) / 2;
-
-					if (angle < 0) {
-						angle = angle + 360;  // converting to positive angles
-					}
-
-					// The goal is to always have the text rotated in a way it's readable and above the link
-					// If the link is more horizontal (angle between 90 to 270), flip the text
-					if (angle > 90 && angle < 270) {
-						return `rotate(${angle + 180}, ${midX}, ${midY})`;
-					} else {
-						return `rotate(${angle}, ${midX}, ${midY})`;
-					}
-					return `rotate(${angle}, ${midX}, ${midY})`;
-				});
-	}
-
-		node.append("title").text(d => d.id);
-		simulation
-			.force("link", d3.forceLink().id(d => d.id).distance(height/2))  // Adjusted distance for better spread
-			.force("charge", d3.forceManyBody().strength(-800))  // Adjusted strength for better spread
-			.force("center", d3.forceCenter( width/2, height/2));   // width and height
-
-		simulation.nodes(graph.nodes).on("tick", ticked);
-		simulation.force("link").links(graph.links);
-	});
-
-	// Helper function
-	// Checks if there are multiple links between two nodes
-	function hasParallelEdge(source, target, links) {
-		let count = 0;
-		for (let link of links) {
-			if ((link.source.id === source.id && link.target.id === target.id) ||
-				(link.source.id === target.id && link.target.id === source.id)) {
-				count++;
-			}
 		}
-		return count > 1;
-	}
 
-	function dragstarted(d) {
-	if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-	d.fx = d.x;
-	d.fy = d.y;
-	}
+		// Call initializeD3Chart() to initially load the D3 chart
+		initializeD3Chart();
 
-	function dragged(d) {
-	d.fx = d3.event.x;
-	d.fy = d3.event.y;
-	}
+		// Helper function
+		// Checks if there are multiple links between two nodes
+		function hasParallelEdge(source, target, links) {
+			let count = 0;
+			for (let link of links) {
+				if ((link.source.id === source.id && link.target.id === target.id) ||
+					(link.source.id === target.id && link.target.id === source.id)) {
+					count++;
+				}
+			}
+			return count > 1;
+		}
 
-	function dragended(d) {
-	if (!d3.event.active) simulation.alphaTarget(0);
-	d.fx = null;
-	d.fy = null;
-	}
-</script>
+		function dragstarted(d) {
+		if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+		d.fx = d.x;
+		d.fy = d.y;
+		}
+
+		function dragged(d) {
+		d.fx = d3.event.x;
+		d.fy = d3.event.y;
+		}
+
+		function dragended(d) {
+		if (!d3.event.active) simulation.alphaTarget(0);
+		d.fx = null;
+		d.fy = null;
+		}
+	</script>
 
 
+	<!-- JS to switch content block -->
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
 
-<!-- Off canvas menu overlay, delete to remove dark shadow  -->
-<div id="smobile-menu" class="mobile-only">
-	<!-- Off canvas menu overlay,
-	<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
-		<a href="https://xiaohui-victor-li.github.io/FinDKG/#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
-		<div class="content-wrap text-center">
-			<div class="center-main-menu">
-				<div class="menu-menu-container">
-					<ul id="primary-menu" class="pmenu">
-						<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="./#">FinDKG</a></li>
-						<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="/data/">Data</a></li>
-						<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="/code/">Code</a></li>
-						<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="/code/">iKG LLM</a></li>
-						<li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="/featured-in/">Introduction</a></li>
-						<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="/faq/">FAQ</a></li>
-						</ul>
-					</ul>
-				</div>	
-			</div>
+		// Initially show the primary content area and initialize the D3 chart
+		const primarySection = document.getElementById('primary');
+		primarySection.style.display = 'block';
+		initializeD3Chart();  // Initialize D3 chart at the start
+
+
+		const menuItems = document.querySelectorAll('#primary-menu li');
+		menuItems.forEach(item => {
+			item.addEventListener('click', function() {
+			// Hide all content sections
+			document.querySelectorAll('.content-area').forEach(section => {
+				section.style.display = 'none';
+			});
 			
-		</div>
-	</nav>
-	-->			
-</div>
+			// Show the target content section
+			const targetId = this.getAttribute('data-target');
+			const targetSection = document.getElementById(targetId);
+			if (targetSection) {
+				targetSection.style.display = 'block';
+
+				// If the primary section is shown, initialize the D3 chart
+				if (targetId === 'primary') {
+            	initializeD3Chart();
+          		}
+			}
+			});
+		});
+		});
+	</script>
+	
 
 
-<div id="mobile-menu-overlay"></div>
+	<!-- Off canvas menu overlay, delete to remove dark shadow  -->
+	<div id="smobile-menu" class="mobile-only">
+		<!-- Off canvas menu overlay,
+		<nav id="primary-site-navigation" class="primary-menu main-navigation clearfix">
+			<a href="https://xiaohui-victor-li.github.io/FinDKG/#" id="pull" class="smenu-hide toggle-mobile-menu menu-toggle" aria-controls="secondary-menu" aria-expanded="false">Menu</a>
+			<div class="content-wrap text-center">
+				<div class="center-main-menu">
+					<div class="menu-menu-container">
+						<ul id="primary-menu" class="pmenu">
+							<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="./#">FinDKG</a></li>
+							<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="/data/">Data</a></li>
+							<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="/code/">Code</a></li>
+							<li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="/code/">iKG LLM</a></li>
+							<li id="menu-item-99" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="/featured-in/">Introduction</a></li>
+							<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="/faq/">FAQ</a></li>
+							</ul>
+						</ul>
+					</div>	
+				</div>
+				
+			</div>
+		</nav>
+		-->			
+	</div>
 
-<style id="core-block-supports-inline-css" type="text/css">
-.wp-container-2.wp-container-2{flex-wrap:nowrap;}
-</style>
-<script type="text/javascript" src="./files/navigation.js" id="minimalistblogger-navigation-js"></script>
-<script type="text/javascript" src="./files/skip-link-focus-fix.js" id="minimalistblogger-skip-link-focus-fix-js"></script>
-<script type="text/javascript" src="./files/script.js" id="minimalistblogger-script-js"></script>
-<script type="text/javascript" src="./files/jquery.flexslider.js" id="flexslider-js"></script>
-<script type="text/javascript" src="./files/accessibility.js" id="minimalistblogger-accessibility-js"></script>
 
+	<div id="mobile-menu-overlay"></div>
+
+	<style id="core-block-supports-inline-css" type="text/css">
+	.wp-container-2.wp-container-2{flex-wrap:nowrap;}
+	</style>
+	<script type="text/javascript" src="./files/navigation.js" id="minimalistblogger-navigation-js"></script>
+	<script type="text/javascript" src="./files/skip-link-focus-fix.js" id="minimalistblogger-skip-link-focus-fix-js"></script>
+	<script type="text/javascript" src="./files/script.js" id="minimalistblogger-script-js"></script>
+	<script type="text/javascript" src="./files/jquery.flexslider.js" id="flexslider-js"></script>
+	<script type="text/javascript" src="./files/accessibility.js" id="minimalistblogger-accessibility-js"></script>
 
 </body>
-
-
 
 </html>
