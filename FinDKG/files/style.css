@@ -67,6 +67,8 @@ a {
 	color: #003E74;
 	text-decoration:underline;
 }
+
+
 .aligncenter,
 .clear:after,
 .clearfix:after,
@@ -139,7 +141,8 @@ abbr[title] {
 b,
 optgroup,
 strong {
-	font-weight: 700
+	font-weight: 700; 
+	color: #003E74; /* Change to whatever color you prefer */
 }
 
 cite,
@@ -2694,3 +2697,4 @@ input#wp-comment-cookies-consent {
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
+

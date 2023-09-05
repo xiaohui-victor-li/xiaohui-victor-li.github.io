@@ -100,9 +100,9 @@
 							<li data-target="data" id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="#data">Data</a></li>
 							<li data-target="model" id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#model">Model</a></li>
 							<li data-target="llm" id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#llm">iKG LLM</a></li>
-							<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="#">Introduction</a></li>
-							<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="#">FAQ</a></li>
-							</ul>
+							<li data-target="intro" id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="#intro">Introduction</a></li>
+							<li data-target="faq" id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="#faq">FAQ</a></li>
+						</ul>
 					</div>				
 				</div>
 				</div>
@@ -164,11 +164,12 @@
 					</div>
 					</div>
 
-					<p>The follwing table provides a detailed profile of these "Top KG Entities", alongside financial variables expected to be most influenced by them in the coming week, as predicted by our graph-based AI model:</p>
+					<p>The follwing FinDKG analytical table provides a detailed profile of these <strong>"Top KG Entities"</strong>, alongside financial variables expected to be most influenced by them in the coming week, as predicted by our graph-based AI model:</p>
 
 					<iframe src="data/FinDKG_reactable.html" width="100%" height="550px"></iframe>
-							
-					<p>The "Predicted Most Impacted Financial Entities" column pinpoints financial variables predicted to be mostly impacted in the forthcoming week. The table also shows a ranked percentile to indicate the relative importance of each entity among the whole 10,000+ entity universe, with a "Novelty" score indicating its recent emergence in the dataset. By examining the "Recent 3-month Trend", one can gauge the trajectory of an entity's influence over time.</p>
+					
+					<p style="padding-top: 0.5em;">The column labeled <strong>"Predicted Most Impacted Financial Entities"</strong> identifies the financial variables that are forecasted to experience the most significant changes in the week ahead. Additionally, the table ranks these entities within a vast universe of over 10,000 other entities, using the <strong>“Rank Percentile”</strong> score (0% to 100%) to signify their relative importance of the FinDKG. A separate <strong>"Novelty"</strong> z-score is included to highlight how recently the entity has appeared in the dataset. Moreover, by scrutinizing the <strong>"Recent 3-month Trend"</strong> column, users can discern the evolving influence trend of a particular entity over the past quarter.
+					</p>
 
 					<!-- 
 					<figure class="wp-block-image size-large">
@@ -193,10 +194,10 @@
 					
 						<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap is-layout-flex wp-container-2">
 							<div class="wp-block-column is-vertically-aligned-center is-layout-flow">
-							<p>The financial sector, despite its wealth of text data, often lags in the availability of specialized knowledge graphs (KGs). Addressing this need, we introduce the FinDKG dataset — a unique, open-source Financial Dynamic Knowledge Graph, designed to provide a temporally-resolved representation of global economic and market trends. Leveraging curated open-source financial news articles of deep history within Wayback Machine archive, FinDKG serves as an invaluable resource for researchers. The dataset is research available (non-commercial purpose only) for <a rel="noreferrer noopener" href="https://github.com/xiaohui-victor-li/FinDKG/tree/main/FinDKG_dataset" target="_blank">download</a> on GitHub.
+							<p>The financial sector, despite its wealth of text data, often lags in the availability of specialized knowledge graphs (KGs). Addressing this need, we introduce the <strong>FinDKG dataset</strong> — a unique, open-source Financial Dynamic Knowledge Graph, designed to provide a temporally-resolved representation of global economic and market trends. Leveraging curated open-source financial news articles of deep history within Wayback Machine archive, FinDKG serves as an invaluable resource for researchers. The dataset is research available (non-commercial purpose only) for <a rel="noreferrer noopener" href="https://github.com/xiaohui-victor-li/FinDKG/tree/main/FinDKG_dataset" target="_blank">download</a> on GitHub.
 							</p>
 							<figure class="wp-block-image size-large">
-								<img decoding="async" width="1024" height="614" src="./charts/findkg_dataset.png" alt="" class="wp-image-140"  sizes="(max-width: 1024px) 100vw, 1024px">
+								<img decoding="async" width="800" height="614" src="./charts/findkg_dataset.png" alt="" class="wp-image-140"  sizes="(max-width: 1024px) 100vw, 1024px">
 							</figure>
 
 							<h3>Bridging the Gap in Finance-Specific Knowledge Graphs</h3>
@@ -216,6 +217,53 @@
 				</article>
 			</main>
 		</div>
+
+		<!--  #Model Section           -->
+		<div id="model" class="featured-content content-area">
+			<main class="site-main">
+				<article id="post-5" class="posts-entry fbox post-5 page type-page status-publish hentry">
+					<!-- .entry-header -->
+					<header class="entry-header">
+						<h1 class="entry-title">KGTransformer for Dynamic Knowledge Graph Learning</h1>	
+					</header>
+				
+					<div class="entry-content">
+					
+						<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap is-layout-flex wp-container-2">
+							<div class="wp-block-column is-vertically-aligned-center is-layout-flow">
+							<p>The rise of <a rel="noreferrer noopener" href="https://blog.google/products/search/introducing-knowledge-graph-things-not/" target="_blank">modern Knowledge Graphs (KGs)</a> in 2012 was a milestone that shifted the focus from keyword-based search to a more nuanced, context-aware understanding. However, the majority of the research and applications still rely on static KGs, overlooking their dynamic nature. To address this gap, we introduce the <strong>KGTransformer</strong>, a cutting-edge Graph Neural Network model tailored for Temporal Knowledge Graphs Learning. KGTransformer not only excels in graph analytics when compared to static KG models, but it also offers a powerful framework for fine-grained temporal inference and dynamic pattern recognition. Interested readers can delve into the technical architecture and get access to the KGTransformer source code via <a rel="noreferrer noopener" href="https://github.com/xiaohui-victor-li/FinDKG" target="_blank">GitHub repository</a>.
+							</p>
+							<h3>Model Architecture</h3>
+							<figure class="wp-block-image size-large">
+								<img decoding="async" width="1024" height="614" src="./charts/KGTransformer.png" alt="" class="wp-image-140"  sizes="(max-width: 1024px) 100vw, 1024px">
+							</figure>
+
+							<p>The KGTransformer extends the existing Graph Attention Network (GAT) to incorporate the KG <strong>"meta-relations."</strong> In simple terms, it enables the model to focus not just on the relationship but also on the type of entities involved. This enhanced focus is achieved through an extended attention mechanism that brings an unprecedented level of nuance and contextualization to node representations within the graph.
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;
+							 For instance, if OpenAI invents a new model like ChatGPT, KGTransformer could capture various aspects of this relationship—from financial transactions to technological synergies—all simultaneously.
+							
+							</p>
+							
+							<h3>Temporal Knowledge Graph Learning</h3>
+							<p><strong>Temporal Knowledge Graphs (TKGs)</strong> add a time dimension to traditional static knowledge graphs, capturing the evolving relationships between entities across various domains. This added complexity presents new challenges in graph analytics, such as temporal link prediction, that static models simply aren't equipped to handle. TKGs associate a time-stamp with each edge in the graph, providing a rich temporal context for understanding how relationships between entities change over time.		
+								<br>&nbsp;&nbsp;&nbsp;&nbsp;
+							Unlike traditional models, KGTransformer features a <strong>probabilistic dynamic graph learning framework</strong> that allows it to adapt to the time-evolving nature of TKGs. It utilizes specialized attention mechanisms that are capable of recognizing and learning both the structural intricacies and the temporal dynamics inherent in these complex graphs. By leveraging both entity and relationship metadata, KGTransformer provides a more nuanced and accurate analysis for tasks like temporal link prediction, setting a new standard for how we understand and interact with evolving knowledge structures.
+							</p>
+							
+							<h3>Performance Metrics & Real-world Application</h3>
+							<p>Out-of-sample evaluation results on the FinDKG dataset show a remarkable performance uplift of approximately 15% in key TKG prediction metrics like Mean Reciprocal Rank (MRR) and Hits@3,10 when compared to other state-of-the-art TKG models. These metrics validate KGTransformer's superiority in capturing the dynamic interrelations within TKGs.
+							</p>
+							<figure class="wp-block-image size-large">
+								<img decoding="async" width="800" height="150" src="./charts/FinDKG_main_finding.png" alt="" class="wp-image-140"  sizes="(max-width: 1024px) 100vw, 1024px">
+							</figure>
+
+						</div>
+
+					</div>
+				</article>
+			</main>
+		</div>
+
 
 		<!--   #llm IKG Section   -->
 		<div id="llm" class="featured-content content-area">
@@ -275,7 +323,7 @@
 					<div class="sidebar-title-border">
 						<h3 class="widget-title">Model</h3></div></div>
 						<div class="textwidget"><p>
-							<span style="font-weight: 400;">Enter the Introduction tab to learn more about the dynamic knowledge graph transformer model.</span>
+							<span style="font-weight: 400;">Enter the <a href="#model">Model tab</a> to learn more about the dynamic knowledge graph transformer model.</span>
 						</p>
 				</div>
 			</section>
