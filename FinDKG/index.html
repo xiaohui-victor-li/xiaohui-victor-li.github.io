@@ -114,7 +114,7 @@
 							<li data-target="primary" id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href=".">🌐FinDKG</a></li>
 							<li data-target="data" id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33"><a href="#data">Data</a></li>
 							<li data-target="model" id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#model">Model</a></li>
-							<li data-target="llm" id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#llm">iKG LLM</a></li>
+							<li data-target="llm" id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="#llm">ICKG LLM</a></li>
 							<li data-target="intro" id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-99"><a href="#intro">Introduction</a></li>
 							<li data-target="faq" id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-87"><a href="#faq">FAQ</a></li>
 						</ul>
@@ -285,20 +285,20 @@
 				<article id="post-5" class="posts-entry fbox post-5 page type-page status-publish hentry">
 					<!-- .entry-header -->
 					<header class="entry-header">
-						<h1 class="entry-title">iKG: Imperial Knowledge Graph Generator Large Langue Model</h1>	
+						<h1 class="entry-title">ICKG: Integrated Contextual Knowledge Graph Generator Large Langue Model</h1>	
 					</header>
 				
 					<div class="entry-content">
 					
 						<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap is-layout-flex wp-container-2">
 							<div class="wp-block-column is-vertically-aligned-center is-layout-flow">
-							<p>Imperial Knowledge Graph Generator, termed <a rel="noreferrer noopener" href="https://huggingface.co/victorlxh/iKG-v1.0" target="_blank">iKG</a>, is an innovative, instruction-following Large Language Model (LLM) that is fine-tuned for the purpose of generative knowledge graph construction. Drawing from the advanced capabilities of LLM and built on top of the <a rel="noreferrer noopener" href="https://lmsys.org/blog/2023-03-30-vicuna/" target="_blank">Vicuna-7B</a> from Meta's <a rel="noreferrer noopener" href="https://ai.meta.com/llama/" target="_blank">LLaMA</a> models, iKG offers unparalleled proficiency in converting vast amounts of unstructured textual data into structured knowledge graphs. With proven efficiency for deployment on consumer-level GPUs, iKG not only matches the performance of leading models but also does so at a fraction of the computational cost. This makes iKG an essential tool for researchers and professionals aiming to unlock actionable insights from knowledge graph data across various domains.</p>
+							<p>Integrated Contextual Knowledge Graph Generator, termed <a rel="noreferrer noopener" href="https://huggingface.co/victorlxh/ICKG-v2.0" target="_blank">ICKG</a>, is an innovative, instruction-following Large Language Model (LLM) that is fine-tuned for the purpose of generative knowledge graph construction. Drawing from the advanced capabilities of LLM and built on top of the <a rel="noreferrer noopener" href="https://lmsys.org/blog/2023-03-30-vicuna/" target="_blank">Vicuna-7B</a> from Meta's <a rel="noreferrer noopener" href="https://ai.meta.com/llama/" target="_blank">LLaMA 2.0</a> models, ICKG offers unparalleled proficiency in converting vast amounts of unstructured textual data into structured knowledge graphs. With proven efficiency for deployment on consumer-level GPUs, ICKG not only matches the performance of leading models but also does so at a fraction of the computational cost. This makes ICKG an essential tool for researchers and professionals aiming to unlock actionable insights from knowledge graph data across various domains.</p>
 							
 							<figure class="wp-block-image size-large">
 								<img decoding="async" width="1024" height="614" src="./charts/iKG_framework.png" alt="" class="wp-image-140"  sizes="(max-width: 1024px) 100vw, 1024px">
 							</figure>
 
-							<p>To train iKG, we began with Vicuna-7B as our foundational architecture. Building on this, we fine-tuned iKG using self-instruct methodology involving GPT-4's API to generate high-quality instruction-response pairs. The process involved 3K demonstrations that were specifically engineered to guide the model in knowledge graph construction. This fine-tuning allows iKG to excel at extracting entities and relationships from unstructured text data, transforming it into structured knowledge graphs efficiently and accurately. 
+							<p>To train ICKG, we began with Vicuna-7B as our foundational architecture. Building on this, we fine-tuned ICKG using self-instruct methodology involving GPT-4's API to generate high-quality instruction-response pairs. The process involved 3K demonstrations that were specifically engineered to guide the model in knowledge graph construction. This fine-tuning allows ICKG to excel at extracting entities and relationships from unstructured text data, transforming it into structured knowledge graphs efficiently and accurately. 
 							</p>
 
 							<h3>The Challenge of Knowledge Graph Construction: Converting Text into Structured Data</h3>
@@ -306,10 +306,10 @@
 							<p>In an age where text data is growing exponentially, the biggest challenge isn't just collecting it, but structuring and making sense of it. Knowledge graphs, which can represent complex relationships between entities, have become a cornerstone in tackling this challenge. They've found applications in a wide array of sectors, from search engines to healthcare and finance. However, constructing these graphs manually is time-consuming, and automating this process requires sophisticated technology.</p>
 							
 							<h3>Leveraging LLMs with Prompt Engineering</h3>
-							<p>The beauty of iKG lies in its reliance on Large Language Models (LLMs) and a technique called "prompt engineering." LLMs like GPT-4 have the capability to understand and generate human-like text, thanks to their training on extensive text data. iKG is fine-tuned from Vicuna-7B, which itself is based on Meta's LLaMA model, and utilizes the GPT-4 API for data generation.
+							<p>The beauty of ICKG lies in its reliance on Large Language Models (LLMs) and a technique called "prompt engineering." LLMs like GPT-4 have the capability to understand and generate human-like text, thanks to their training on extensive text data. ICKG is fine-tuned from Vicuna-7B, which itself is based on Meta's LLaMA model, and utilizes the GPT-4 API for data generation.
 							</p>
 
-							<p>Prompt engineering is where the magic happens. It involves manipulating the input query or "prompt" to guide the model's response effectively. With this method, iKG can precisely extract intricate relationships and entities from text, making it incredibly effective for knowledge graph construction.
+							<p>Prompt engineering is where the magic happens. It involves manipulating the input query or "prompt" to guide the model's response effectively. With this method, ICKG can precisely extract intricate relationships and entities from text, making it incredibly effective for knowledge graph construction.
 							</p>
 
 						</div>
@@ -455,7 +455,7 @@
 					<ul>
 					<li>Thesis paper to deep dive into the project</li>
 					<li>FinDKG research data and model code for benchmarking</li>
-					<li><span style="text-decoration: underline;"><a href="#llm">iKG</a></span> fine-tuned LLM for generative knowledge graph construction</li>
+					<li><span style="text-decoration: underline;"><a href="#llm">ICKG</a></span> fine-tuned LLM for generative knowledge graph construction</li>
 					<li>Head to the <span style="text-decoration: underline;"><a href="#data">Data tab</a></span> and <u><a href="https://github.com/xiaohui-victor-li/FinDKG/tree/main" target="_blank" rel="noopener">github repo</a> </u>for details</li>
 					</ul>
 					<p>&nbsp;
